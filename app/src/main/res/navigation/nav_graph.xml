@@ -7,25 +7,52 @@
 
     <fragment
         android:id="@+id/imageFragment"
-        android:name="com.example.pixabay.ui.fragments.ImageFragment"
+        android:name="com.example.codingtask.ui.fragments.ImageFragment"
         android:label="Image Fragment"
         tools:layout="@layout/fragment_image" >
         <action
-            android:id="@+id/action_imageFragment_to_detailFragment"
-            app:destination="@id/detailFragment" />
+            android:id="@+id/action_imageFragment_to_bottomSheet"
+            app:destination="@id/bottomSheet" />
     </fragment>
 
     <fragment
         android:id="@+id/detailFragment"
-        android:name="com.example.pixabay.ui.fragments.DetailFragment"
+        android:name="com.example.codingtask.ui.fragments.DetailFragment"
         android:label="Detail Fragment"
-        tools:layout="@layout/fragment_detail" >
+        tools:layout="@layout/fragment_detail">
         <action
             android:id="@+id/action_detailFragment_to_imageFragment"
-            app:destination="@id/imageFragment" />
+            app:destination="@id/imageFragment"
+            />
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right"-->
+<!--            app:popUpTo="@id/imageFragment" -->
+
         <argument
             android:name="id"
-            app:argType="com.example.pixabay.data.local.entity.Pixabay" />
+            app:argType="com.example.codingtask.data.local.entity.Pixabay" />
     </fragment>
+
+    <dialog
+        android:id="@+id/bottomSheet"
+        android:name="com.example.codingtask.ui.fragments.BottomSheet"
+        android:label="BottomSheet"
+        tools:layout="@layout/fragment_confirm_dialog">
+
+        <argument
+            android:name="id"
+            app:argType="com.example.codingtask.data.local.entity.Pixabay" />
+        <action
+            android:id="@+id/action_bottomSheet_to_detailFragment"
+            app:destination="@id/detailFragment">
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
+<!--            app:popEnterAnim="@anim/slide_in_left"-->
+<!--            app:popExitAnim="@anim/slide_out_right">-->
+        </action>
+    </dialog>
+
 
 </navigation>

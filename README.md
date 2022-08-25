@@ -39,6 +39,3 @@ Minimum API level supported is: 23
  * [Glide](https://github.com/bumptech/glide) - Image loading framework for android that wraps media decoding, memory and disk caching.
 <br>
 
-## Screenshots
-<img src="assets/fruits.png">
-<img src="assets/shoes.png">
