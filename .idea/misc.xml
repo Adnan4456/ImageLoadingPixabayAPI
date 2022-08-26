@@ -4,6 +4,7 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1" />
+        <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/drawable/bg_gredient.xml" value="0.13" />
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/drawable/circular_image.xml" value="0.13" />
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/drawable/ic_search_white.xml" value="0.13" />
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/drawable/image.xml" value="0.13" />
@@ -16,7 +17,7 @@
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/layout/activity_main.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/layout/fragment_confirm_dialog.xml" value="0.1" />
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/layout/fragment_detail.xml" value="0.22" />
-        <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/layout/fragment_image.xml" value="0.22" />
+        <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/layout/fragment_image.xml" value="0.18009478672985782" />
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/layout/fragment_search.xml" value="0.14130434782608695" />
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/layout/image_item.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/Adnan Khan/AndroidStudioProjects/Pixabay/app/src/main/res/layout/test.xml" value="0.17346014492753623" />

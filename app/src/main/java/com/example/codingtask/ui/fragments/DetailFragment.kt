@@ -34,11 +34,12 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         binding.dropdown.setOnClickListener{
 
             if (binding.expandableLayout.visibility == View.GONE) {
-                TransitionManager.beginDelayedTransition(binding.cardView, AutoTransition())
-                binding.dropdown.setImageResource(R.drawable.ic_drop_up)
+//                TransitionManager.beginDelayedTransition(binding.cardView, AutoTransition())
                 binding.expandableLayout.visibility = View.VISIBLE
+                binding.dropdown.setImageResource(R.drawable.ic_drop_up)
+
             } else {
-                TransitionManager.beginDelayedTransition(binding.cardView, AutoTransition())
+//                TransitionManager.beginDelayedTransition(binding.cardView, AutoTransition())
                 binding.expandableLayout.visibility = View.GONE
                 binding.dropdown.setImageResource(R.drawable.ic_drop_down)
             }
