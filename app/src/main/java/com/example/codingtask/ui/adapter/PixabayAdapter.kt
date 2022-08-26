@@ -1,6 +1,8 @@
 package com.example.codingtask.ui.adapter
 
+import android.transition.TransitionManager
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -10,6 +12,9 @@ import com.example.codingtask.utils.PixabayComparator
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import android.transition.AutoTransition
+import android.util.Log
+import com.example.codingtask.R
 
 
 class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<Pixabay,
@@ -18,11 +23,25 @@ class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<
     inner class PixabayViewHolder(private val binding: ImageItemBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(pixabay: Pixabay) {
             binding.listItem = pixabay
+
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PixabayViewHolder {
         val imageItemBinding = ImageItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        imageItemBinding.dropdown.setOnClickListener {
+
+//            Log.d("Tag","clicked")
+            if (imageItemBinding.expandableLayout.visibility == View.GONE) {
+                TransitionManager.beginDelayedTransition(imageItemBinding.cardView, AutoTransition())
+                imageItemBinding.dropdown.setImageResource(R.drawable.ic_drop_up)
+                imageItemBinding.expandableLayout.visibility = View.VISIBLE
+            } else {
+                TransitionManager.beginDelayedTransition(imageItemBinding.cardView, AutoTransition())
+                imageItemBinding.expandableLayout.visibility = View.GONE
+                imageItemBinding.dropdown.setImageResource(R.drawable.ic_drop_down)
+            }
+        }
         return PixabayViewHolder(imageItemBinding)
     }
 
@@ -32,6 +51,8 @@ class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<
         holder.itemView.setOnClickListener {
             onClickListener.onClick(pixabay)
         }
+
+
     }
     class OnClickListener(val clickListener: (pix: Pixabay) -> Unit) {
         fun onClick(pix: Pixabay) = clickListener(pix)

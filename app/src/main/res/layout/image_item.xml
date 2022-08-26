@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -10,36 +11,84 @@
     </data>
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="170dp"
+        android:layout_height="wrap_content"
         android:layout_margin="8dp"
         app:cardCornerRadius="12dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:foreground ="?selectableItemBackground">
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/imageView"
+                imageFromUrl="@{listItem.webformatURL}"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                imageFromUrl = "@{listItem.webformatURL}"
-                app:srcCompat="@drawable/ic_person" />
+                android:transitionName="@string/image_small" />
+
+<!--            android:background="#7000"-->
 
             <TextView
                 android:id="@+id/user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_margin="15dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_below="@+id/imageView"
+                tools:text="@{listItem.user}" />
+
+            <ImageView
+                android:id="@+id/dropdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/user"
+                android:layout_alignParentRight="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginRight="24dp"
+                android:background="@drawable/round_edittext"
+                android:src="@drawable/ic_drop_down"
+                android:foreground ="?selectableItemBackground"
+                app:tint="@color/teal_700" />
+
+            <LinearLayout
+                android:id="@+id/expandableLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:background="#7000"
-                android:gravity="center"
-                android:paddingTop="8dp"
-                android:paddingBottom="8dp"
-                android:textColor="#FFF"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                tools:text="@{listItem.user}" />
+                android:orientation="vertical"
+                android:visibility="gone"
+                android:layout_below="@+id/user">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tags"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tags of Image"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:padding="6dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/teal_700"
+                    tools:layout_editor_absoluteX="146dp"
+                    tools:layout_editor_absoluteY="537dp" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:textColor="@color/black"
+                    tools:text="@{listItem.tags}"
+                    android:layout_marginBottom="5dp"/>
+
+            </LinearLayout>
 
         </RelativeLayout>
     </androidx.cardview.widget.CardView>

@@ -24,11 +24,12 @@
             android:id="@+id/action_detailFragment_to_imageFragment"
             app:destination="@id/imageFragment"
             />
-<!--            app:enterAnim="@anim/slide_in_right"-->
-<!--            app:exitAnim="@anim/slide_out_left"-->
-<!--            app:popEnterAnim="@anim/slide_in_left"-->
-<!--            app:popExitAnim="@anim/slide_out_right"-->
-<!--            app:popUpTo="@id/imageFragment" -->
+<!--        app:popExitAnim="@anim/slide_out_right"-->
+<!--        app:popEnterAnim="@anim/slide_in_left"-->
+
+
+<!--        app:enterAnim="@anim/slide_in_right"-->
+<!--        app:exitAnim="@anim/slide_out_left"-->
 
         <argument
             android:name="id"
@@ -47,11 +48,12 @@
         <action
             android:id="@+id/action_bottomSheet_to_detailFragment"
             app:destination="@id/detailFragment">
-<!--            app:enterAnim="@anim/slide_in_right"-->
-<!--            app:exitAnim="@anim/slide_out_left"-->
 <!--            app:popEnterAnim="@anim/slide_in_left"-->
-<!--            app:popExitAnim="@anim/slide_out_right">-->
+<!--            app:enterAnim="@anim/slide_in_right"-->
+<!--            app:popExitAnim="@anim/slide_out_right"-->
+<!--            app:exitAnim="@anim/slide_out_left"-->
         </action>
+
     </dialog>
 
 

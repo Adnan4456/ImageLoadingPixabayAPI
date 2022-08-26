@@ -9,4 +9,6 @@
     <string name="message">Do you want to see details of this image</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="image_small">image_small</string>
+    <string name="image_large">image_large</string>
 </resources>

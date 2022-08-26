@@ -1,5 +1,6 @@
 package com.example.codingtask.data.local.repository
 
+import android.util.Log
 import com.example.codingtask.data.local.db.PixabayDb
 import com.example.codingtask.data.local.entity.Pixabay
 import com.example.codingtask.data.remote.PixabayApi
@@ -18,7 +19,7 @@ class PixabayRepository @Inject constructor(
     private val pixabayApi: PixabayApi,
     private val pixabayDatabase: PixabayDb
     ): SafeApiRequest() , RepositoryInterface {
-        override fun fetchImages(name: String): Flow<Resource<List<Pixabay>>> = flow {
+        override suspend fun fetchImages(name: String): Flow<Resource<List<Pixabay>>> = flow {
             emit(Resource.Loading())
 
             // first checking data is present in database.
@@ -29,6 +30,7 @@ class PixabayRepository @Inject constructor(
             try {
                 // Get our words and replace them in the database
                 val data = pixabayApi.fetchImages(name)
+                Log.d("tags","${data.hits.get(1).tags}")
                 pixabayDatabase.pixabayDao().saveImage(data.hits)
                 //pixabayDatabase.pixabayDao().deleteAll(data.hits.map { it.previewURL })
 
