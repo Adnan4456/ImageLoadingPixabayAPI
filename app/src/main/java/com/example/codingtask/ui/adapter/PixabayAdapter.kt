@@ -23,7 +23,6 @@ class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<
     inner class PixabayViewHolder(private val binding: ImageItemBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(pixabay: Pixabay) {
             binding.listItem = pixabay
-
         }
     }
 
@@ -31,7 +30,6 @@ class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<
         val imageItemBinding = ImageItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         imageItemBinding.dropdown.setOnClickListener {
 
-//            Log.d("Tag","clicked")
             if (imageItemBinding.expandableLayout.visibility == View.GONE) {
                 TransitionManager.beginDelayedTransition(imageItemBinding.cardView, AutoTransition())
                 imageItemBinding.dropdown.setImageResource(R.drawable.ic_drop_up)
@@ -51,8 +49,6 @@ class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<
         holder.itemView.setOnClickListener {
             onClickListener.onClick(pixabay)
         }
-
-
     }
     class OnClickListener(val clickListener: (pix: Pixabay) -> Unit) {
         fun onClick(pix: Pixabay) = clickListener(pix)

@@ -60,22 +60,25 @@ class ImageFragment : Fragment(R.layout.fragment_image) {
 
 
 
-        binding.searchViewFab?.setOnClickListener{
-            if (binding.searchLayout.isVisible){
-                var slidUp = AnimationUtils.loadAnimation(requireContext(),R.anim.slide_up)
-                binding.searchLayout.startAnimation(slidUp)
-                binding.searchLayout.visibility = View.GONE
-            }
-            else
-            {
-                var falldown = AnimationUtils.loadAnimation(requireContext(),R.anim.fall_down)
-                binding.searchLayout.visibility = View.VISIBLE
-                binding.searchLayout.startAnimation(falldown)
-            }
-        }
+//        binding.searchViewFab?.setOnClickListener{
+//        }
+        binding.imageFramgnet = this
         return binding.root
     }
 
+   fun setVisibility(){
+       if (binding.searchLayout.isVisible){
+           var slidUp = AnimationUtils.loadAnimation(requireContext(),R.anim.slide_up)
+           binding.searchLayout.startAnimation(slidUp)
+           binding.searchLayout.visibility = View.GONE
+       }
+       else
+       {
+           var falldown = AnimationUtils.loadAnimation(requireContext(),R.anim.fall_down)
+           binding.searchLayout.visibility = View.VISIBLE
+           binding.searchLayout.startAnimation(falldown)
+       }
+   }
     private fun subscribeOnline(query: String) {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.getImages(query).collect { result ->

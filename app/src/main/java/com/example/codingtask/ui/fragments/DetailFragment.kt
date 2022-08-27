@@ -29,66 +29,30 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+
         binding = FragmentDetailBinding.inflate(inflater, container, false)
 
-        binding.dropdown.setOnClickListener{
-
-            if (binding.expandableLayout.visibility == View.GONE) {
-//                TransitionManager.beginDelayedTransition(binding.cardView, AutoTransition())
-                binding.expandableLayout.visibility = View.VISIBLE
-                binding.dropdown.setImageResource(R.drawable.ic_drop_up)
-
-            } else {
-//                TransitionManager.beginDelayedTransition(binding.cardView, AutoTransition())
-                binding.expandableLayout.visibility = View.GONE
-                binding.dropdown.setImageResource(R.drawable.ic_drop_down)
-            }
-        }
+//        binding.dropdown.setOnClickListener{}
 
         val image : Pixabay = args.id
         binding.item = image
+
+        binding.detailFragment = this
+
         return binding.root
-
     }
+     fun VisibilityStatus(){
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-//        setUpUI()
-    }
+        if (binding.expandableLayout.visibility == View.GONE) {
+//                TransitionManager.beginDelayedTransition(binding.cardView, AutoTransition())
+            binding.expandableLayout.visibility = View.VISIBLE
+            binding.dropdown.setImageResource(R.drawable.ic_drop_up)
 
-    private fun setUpUI() {
+        } else {
+//                TransitionManager.beginDelayedTransition(binding.cardView, AutoTransition())
+            binding.expandableLayout.visibility = View.GONE
+            binding.dropdown.setImageResource(R.drawable.ic_drop_down)
+        }
 
-        val image = args.id
-        val imageUrl = image.webformatURL
-        val user = image.user
-        val views = image.views.toString()
-        val download = image.downloads.toString()
-        val comments = image.comments.toString()
-        val likes = image.likes
-        val userImage = image.userImageURL
-
-//        CoroutineScope(Dispatchers.Main).launch {
-//            Glide.with(binding.imageView)
-//                .load(imageUrl)
-//                .error(R.drawable.ic_launcher_foreground)
-//                .transition(DrawableTransitionOptions.withCrossFade())
-//                .centerCrop() //scale to fill the imageview
-//                .into(binding.imageView)
-//        }
-//
-//        CoroutineScope(Dispatchers.Main).launch {
-//            Glide.with(binding.imageViewUser)
-//                .load(userImage)
-//                .error(R.drawable.ic_launcher_foreground)
-//                .centerCrop() //scale to fill the imageview
-//                .transition(DrawableTransitionOptions.withCrossFade())
-//                .into(binding.imageViewUser)
-//        }
-
-        binding.textViewViews.text = views
-        binding.textViewComments.text = comments
-        binding.textViewDownloads.text = download
-        binding.textViewLikes.text = likes.toString()
-        binding.textView6.text = user
     }
 }

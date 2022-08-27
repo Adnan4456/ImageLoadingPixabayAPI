@@ -5,6 +5,10 @@
 
     <data>
 
+        <variable
+            name="imageFramgnet"
+            type="com.example.codingtask.ui.fragments.ImageFragment" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -99,7 +103,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
             android:layout_marginRight="20dp"
-            android:layout_marginBottom="30dp" />
+            android:layout_marginBottom="30dp"
+            android:onClick="@{() -> imageFramgnet.setVisibility()}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
