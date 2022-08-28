@@ -18,40 +18,45 @@ import javax.inject.Inject
 class PixabayRepository @Inject constructor(
     private val pixabayApi: PixabayApi,
     private val pixabayDatabase: PixabayDb
-    ): SafeApiRequest() , RepositoryInterface {
+    ): SafeApiRequest(),RepositoryInterface {
         override suspend fun fetchImages(name: String): Flow<Resource<List<Pixabay>>> = flow {
             emit(Resource.Loading())
 
             // first checking data is present in database.
             val pixabayImage = pixabayDatabase.pixabayDao().fetchImages(name)
             emit(Resource.Loading(data = pixabayImage))
-
-            //No then
-            try {
-                // Get our words and replace them in the database
-                val data = pixabayApi.fetchImages(name)
-                Log.d("tags","${data.hits.get(1).tags}")
-                pixabayDatabase.pixabayDao().saveImage(data.hits)
-                //pixabayDatabase.pixabayDao().deleteAll(data.hits.map { it.previewURL })
-
+            if(pixabayImage.size >0){
+                Log.d("TAG","pixabayImage data is present in database")
+                //Emit this data
+                emit(Resource.Success(pixabayImage))
             }
-            catch (e: HttpException) {
-                emit(
-                    Resource.Error(message = "Error .",
-                        data = pixabayImage
+            else
+            {
+                Log.d("TAG","pixabayImage data is not present in database")
+
+                try {
+                    // Get our words and replace them in the database
+                    val data = pixabayApi.fetchImages(name)
+                    pixabayDatabase.pixabayDao().saveImage(data.hits)
+                    // Emit our data to the UI
+                    val newImage = pixabayDatabase.pixabayDao().fetchImages(name)
+                    emit(Resource.Success(newImage))
+                }
+                catch (e: HttpException) {
+                    emit(
+                        Resource.Error(message = "Error .",
+                            data = pixabayImage
+                        )
                     )
-                )
-            }
-            catch (e: IOException) {
-                emit(
-                    Resource.Error("Internet error", data = pixabayImage
+                }
+                catch (e: IOException) {
+                    emit(
+                        Resource.Error("Internet error", data = pixabayImage
+                        )
                     )
-                )
+                }
             }
 
-            // Emit our data to the UI
-            val newImage = pixabayDatabase.pixabayDao().fetchImages(name)
-            emit(Resource.Success(newImage))
         }.flowOn(Dispatchers.IO) // getting data from server on background thread IO
 }
 

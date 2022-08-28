@@ -22,7 +22,7 @@ class PixabayViewModel @Inject constructor(
 
     suspend fun getImages(query: String): Flow<Resource<List<Pixabay>>> {
         _searchQuery.value = query
-        Log.d("data" ,  _searchQuery.value.toString())
+//        Log.d("data" ,  _searchQuery.value.toString())
         return repository.fetchImages(query)
     }
 }

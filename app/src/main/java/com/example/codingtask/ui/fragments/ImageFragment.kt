@@ -32,18 +32,20 @@ class ImageFragment : Fragment(R.layout.fragment_image) {
     private lateinit var pixabayAdapter: PixabayAdapter
     private var internetStatus:InternetStatus = InternetStatus()
 
+//    private var status: Boolean = false
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentImageBinding.inflate(inflater, container, false)
         pixabayAdapter  = PixabayAdapter(PixabayAdapter.OnClickListener { photo ->
-
             val action = ImageFragmentDirections.actionImageFragmentToBottomSheet(photo)
             findNavController().navigate(action)
         })
 
         viewModel.searchQuery.value?.let { subscribeOnline(it) }
+
         binding.searchLayout.setEndIconOnClickListener {
 
             if (internetStatus.isOnline(requireContext())){
@@ -58,15 +60,11 @@ class ImageFragment : Fragment(R.layout.fragment_image) {
             }
         }
 
-
-
-//        binding.searchViewFab?.setOnClickListener{
-//        }
         binding.imageFramgnet = this
         return binding.root
     }
 
-   fun setVisibility(){
+    fun setVisibility(){
        if (binding.searchLayout.isVisible){
            var slidUp = AnimationUtils.loadAnimation(requireContext(),R.anim.slide_up)
            binding.searchLayout.startAnimation(slidUp)
@@ -87,31 +85,33 @@ class ImageFragment : Fragment(R.layout.fragment_image) {
                         binding.progressBar.isVisible = false
                         binding.imageRecycler.isVisible = true
                         if (result.data?.isEmpty()!!) {
-
                             showSnackbar("No Images found ")
 //                            Toast.makeText(requireContext(), "No Images found ", Toast.LENGTH_LONG).show()
-                        } else {
+                        }
+                        else {
                             val pix = result.data
                             pixabayAdapter.submitList(pix)
                             binding.imageRecycler.adapter = pixabayAdapter
                             var slidUp = AnimationUtils.loadAnimation(requireContext(),R.anim.slide_up)
                             binding.searchLayout.visibility = View.GONE
                             binding.searchLayout.startAnimation(slidUp)
-
                             Timber.d("${result.data}")
                         }
                     }
                     is Resource.Error -> {
                         binding.progressBar.isVisible = true
-
                     }
                     is Resource.Loading -> {
                         binding.progressBar.isVisible = true
-
                     }
                 }
             }
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("TAG","Image fragment onDestroy is called.")
     }
 }
 
