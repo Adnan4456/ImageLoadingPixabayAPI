@@ -32,8 +32,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         binding = FragmentDetailBinding.inflate(inflater, container, false)
 
-//        binding.dropdown.setOnClickListener{}
-
         val image : Pixabay = args.id
         binding.item = image
 
@@ -41,6 +39,8 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
         return binding.root
     }
+
+    //calling this function from XML file
      fun VisibilityStatus(){
 
         if (binding.expandableLayout.visibility == View.GONE) {

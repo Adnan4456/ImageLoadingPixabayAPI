@@ -3,6 +3,7 @@ package com.example.codingtask.di
 import android.content.Context
 import androidx.room.Room
 import com.example.codingtask.data.local.dao.PixabayDao
+import com.example.codingtask.data.local.dao.RemoteKeysDao
 import com.example.codingtask.data.local.db.PixabayDb
 import dagger.Module
 import dagger.Provides
@@ -28,6 +29,12 @@ object DatabaseModule {
     @Singleton
     fun providesDao(pixabayDb: PixabayDb): PixabayDao {
         return pixabayDb.pixabayDao()
+    }
+
+    @Provides
+    @Singleton
+    fun RemoteKeysDao (pixabayDb: PixabayDb): RemoteKeysDao {
+        return pixabayDb.remoteKeyDao()
     }
 
 }

@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
+        //delete call save bitmaps from memory
         Glide.get(this).clearMemory();
 
     }

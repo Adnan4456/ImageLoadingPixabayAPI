@@ -1,5 +1,6 @@
 package com.example.codingtask.data.local.dao
 
+import androidx.paging.PagingSource
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
@@ -16,12 +17,13 @@ interface PixabayDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun saveImage(pixabay: List<Pixabay>)
 
-    @Insert()
+    @Insert
     suspend fun insertRecord(pixabay: Pixabay)
 
     @Query("DELETE FROM pixabay_table")
     suspend fun deleteAll()
 
     @Query("SELECT * FROM pixabay_table WHERE tags OR previewURL OR pageURL LIKE '%' || :query || '%'")
-    suspend fun fetchImages(query: String?): List<Pixabay>
+//    suspend fun fetchImages(query: String?): List<Pixabay>
+     fun fetchImages(query: String?): PagingSource<Int,Pixabay>
 }

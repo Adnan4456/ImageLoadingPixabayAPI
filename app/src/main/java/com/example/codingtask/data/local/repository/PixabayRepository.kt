@@ -1,18 +1,14 @@
 package com.example.codingtask.data.local.repository
 
-import android.util.Log
 import com.example.codingtask.data.local.db.PixabayDb
 import com.example.codingtask.data.local.entity.Pixabay
 import com.example.codingtask.data.remote.PixabayApi
 import com.example.codingtask.utils.RepositoryInterface
 import com.example.codingtask.utils.Resource
 import com.example.codingtask.utils.SafeApiRequest
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
-import kotlinx.coroutines.flow.flowOn
-import retrofit2.HttpException
-import java.io.IOException
+
 import javax.inject.Inject
 
 class PixabayRepository @Inject constructor(
@@ -20,8 +16,8 @@ class PixabayRepository @Inject constructor(
     private val pixabayDatabase: PixabayDb
     ): SafeApiRequest(),RepositoryInterface {
         override suspend fun fetchImages(name: String): Flow<Resource<List<Pixabay>>> = flow {
-            emit(Resource.Loading())
-
+//            emit(Resource.Loading())
+/*
             // first checking data is present in database.
             val pixabayImage = pixabayDatabase.pixabayDao().fetchImages(name)
             emit(Resource.Loading(data = pixabayImage))
@@ -58,8 +54,9 @@ class PixabayRepository @Inject constructor(
                     )
                 }
             }
-
-        }.flowOn(Dispatchers.IO) // getting data from server on background thread IO
+*/
+        }
+//        }.flowOn(Dispatchers.IO) // getting data from server on background thread IO
 }
 
 

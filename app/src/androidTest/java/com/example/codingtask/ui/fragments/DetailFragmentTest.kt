@@ -41,8 +41,8 @@ class DetailFragmentTest{
 
     @Test
     fun username_is_showing() {
-        onView(withId(R.id.textViewUserName))
-            .check(ViewAssertions.matches(isDisplayed()))
+
+
     }
 
     @Test

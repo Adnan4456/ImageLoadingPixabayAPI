@@ -29,7 +29,7 @@ class PixabayViewModelTest{
     }
 
     @Test
-     fun `check  correct values` () = runBlocking{
+     fun `check correct values` () = runBlocking{
 
         val data = mutableListOf<Pixabay>()
 //        var list = mutableListOf<Resource<List<Pixabay>>>()

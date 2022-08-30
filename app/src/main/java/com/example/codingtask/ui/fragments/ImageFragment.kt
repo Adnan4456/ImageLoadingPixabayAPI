@@ -14,45 +14,56 @@ import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
+import androidx.paging.ExperimentalPagingApi
 import com.example.codingtask.R
 import com.example.codingtask.databinding.FragmentImageBinding
+import com.example.codingtask.ui.adapter.MyPagingAdapter
 import com.example.codingtask.ui.adapter.PixabayAdapter
+import com.example.codingtask.ui.viewmodels.MainViewModel
 import com.example.codingtask.ui.viewmodels.PixabayViewModel
 import com.example.codingtask.utils.InternetStatus
 import com.example.codingtask.utils.Resource
 import com.example.codingtask.utils.hideKeyboard
 import com.example.codingtask.utils.showSnackbar
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.fragment_image.*
+import kotlinx.coroutines.flow.collectLatest
 import timber.log.Timber
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
     private lateinit var binding: FragmentImageBinding
 
-    private val viewModel: PixabayViewModel by viewModels()
+//    private val viewModel: PixabayViewModel by viewModels()
+    private val viewModel:MainViewModel by viewModels()
+
     private lateinit var pixabayAdapter: PixabayAdapter
     private var internetStatus:InternetStatus = InternetStatus()
 
+    @Inject
+    lateinit var myAdapter:MyPagingAdapter
+
 //    private var status: Boolean = false
 
+    @OptIn(ExperimentalPagingApi::class)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        Log.d("TAG","onCreateView method is called")
         binding = FragmentImageBinding.inflate(inflater, container, false)
         pixabayAdapter  = PixabayAdapter(PixabayAdapter.OnClickListener { photo ->
             val action = ImageFragmentDirections.actionImageFragmentToBottomSheet(photo)
             findNavController().navigate(action)
         })
 
-        viewModel.searchQuery.value?.let { subscribeOnline(it) }
+//        viewModel.searchQuery.value?.let { subscribeOnline(it) }
 
         binding.searchLayout.setEndIconOnClickListener {
 
             if (internetStatus.isOnline(requireContext())){
                 Log.d("connect", "Internet is  connected")
-                subscribeOnline(binding.searchLayout.editText?.text.toString())
+//                subscribeOnline(binding.searchLayout.editText?.text.toString())
                 binding.progressBar.isVisible = true
                 hideKeyboard()
             }
@@ -62,20 +73,20 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
             }
         }
 
+        binding.imageRecycler.adapter = myAdapter
+        lifecycleScope.launchWhenStarted {
+
+            viewModel.getAllImages().collectLatest { response ->
+
+                binding.imageRecycler.visibility = View.VISIBLE
+                binding.progressBar.visibility = View.GONE
+
+                myAdapter.submitData(response)
+            }
+        }
+
         binding.imageFramgnet = this
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        Log.d("TAG","onViewCreated method is called")
-    }
-
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        //after
-        Log.d("TAG","onCreat method is called")
     }
 
     fun setVisibility(){
@@ -91,6 +102,7 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
            binding.searchLayout.startAnimation(falldown)
        }
    }
+    /*
     private fun subscribeOnline(query: String) {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
             viewModel.getImages(query).collect { result ->
@@ -122,7 +134,7 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
             }
         }
     }
-
+    */
     override fun onDestroy() {
         super.onDestroy()
         Log.d("TAG","Image fragment onDestroy is called.")
