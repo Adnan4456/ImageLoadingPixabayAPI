@@ -36,7 +36,6 @@ class PixabayViewModelTest{
 
         var list = viewModel.getImages("fruits").collect{
             Log.d("values", " = ${it.data}")
-
         }
 
         assertThat(list,`is`(data))

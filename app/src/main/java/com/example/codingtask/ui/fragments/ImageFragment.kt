@@ -10,6 +10,7 @@ import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
@@ -25,7 +26,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import timber.log.Timber
 
 @AndroidEntryPoint
-class ImageFragment : Fragment(R.layout.fragment_image) {
+class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
     private lateinit var binding: FragmentImageBinding
 
     private val viewModel: PixabayViewModel by viewModels()
@@ -38,6 +39,7 @@ class ImageFragment : Fragment(R.layout.fragment_image) {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        Log.d("TAG","onCreateView method is called")
         binding = FragmentImageBinding.inflate(inflater, container, false)
         pixabayAdapter  = PixabayAdapter(PixabayAdapter.OnClickListener { photo ->
             val action = ImageFragmentDirections.actionImageFragmentToBottomSheet(photo)
@@ -62,6 +64,18 @@ class ImageFragment : Fragment(R.layout.fragment_image) {
 
         binding.imageFramgnet = this
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        Log.d("TAG","onViewCreated method is called")
+    }
+
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        //after
+        Log.d("TAG","onCreat method is called")
     }
 
     fun setVisibility(){

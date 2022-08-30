@@ -1,20 +1,16 @@
 package com.example.codingtask.ui.adapter
 
+import android.transition.AutoTransition
 import android.transition.TransitionManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.example.codingtask.R
 import com.example.codingtask.data.local.entity.Pixabay
 import com.example.codingtask.databinding.ImageItemBinding
 import com.example.codingtask.utils.PixabayComparator
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
-import android.transition.AutoTransition
-import android.util.Log
-import com.example.codingtask.R
 
 
 class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<Pixabay,

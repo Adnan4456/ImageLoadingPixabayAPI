@@ -12,7 +12,6 @@ class FakePixabayRepository:RepositoryInterface {
     private val data = mutableListOf<Pixabay>()
     override suspend fun fetchImages(name: String): Flow<Resource<List<Pixabay>>> {
 
-
         return flow {
             data
         }

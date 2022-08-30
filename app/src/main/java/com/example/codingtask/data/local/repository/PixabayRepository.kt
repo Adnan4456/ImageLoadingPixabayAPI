@@ -37,6 +37,8 @@ class PixabayRepository @Inject constructor(
                 try {
                     // Get our words and replace them in the database
                     val data = pixabayApi.fetchImages(name)
+
+                    //saving data into database
                     pixabayDatabase.pixabayDao().saveImage(data.hits)
                     // Emit our data to the UI
                     val newImage = pixabayDatabase.pixabayDao().fetchImages(name)
