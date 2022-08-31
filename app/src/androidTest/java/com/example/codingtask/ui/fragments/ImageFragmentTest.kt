@@ -63,17 +63,4 @@ class ImagesFragmentTest {
         onView(withId(R.id.search))
             .check(matches(withEffectiveVisibility(Visibility.GONE)))
     }
-
-
-//    @Test
-//    fun testNaivagtion(){
-//
-//        //Nav direction
-////        onView(withId(R.id.imageRecycler))
-////            .perform(actionOnItemAtPosition<MyPagingAdapter.MyViewHolder>(2, click()))
-//
-//        //verify
-//        onView(withId(R.id.dialogue_layout))
-//            .check(matches(isDisplayed()))
-//    }
 }
