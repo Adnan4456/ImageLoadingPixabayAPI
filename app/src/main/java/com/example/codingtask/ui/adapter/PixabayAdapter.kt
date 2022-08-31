@@ -13,8 +13,8 @@ import com.example.codingtask.databinding.ImageItemBinding
 import com.example.codingtask.utils.PixabayComparator
 
 
-class PixabayAdapter(private val onClickListener: OnClickListener): ListAdapter<Pixabay,
-        PixabayAdapter.PixabayViewHolder>(PixabayComparator()) {
+class PixabayAdapter(private val onClickListener: OnClickListener):
+    ListAdapter<Pixabay, PixabayAdapter.PixabayViewHolder>(PixabayComparator()) {
 
     inner class PixabayViewHolder(private val binding: ImageItemBinding): RecyclerView.ViewHolder(binding.root) {
         fun bind(pixabay: Pixabay) {

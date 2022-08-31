@@ -134,6 +134,9 @@ dependencies {
     androidTestImplementation "org.mockito:mockito-core:2.21.0"
     implementation "com.squareup.okhttp3:mockwebserver:4.9.1"
 
+    //recyclerview expresso testing on click
+//    androidTestImplementation "androidx.test.espresso:espresso-contrib"
+
 //    implementation "com.github.chrisbanes:PhotoView:2.4.0"
 
 }

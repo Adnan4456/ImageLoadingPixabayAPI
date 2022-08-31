@@ -15,5 +15,4 @@ import com.example.codingtask.data.local.entity.RemoteKeys
 abstract class PixabayDb: RoomDatabase() {
     abstract fun pixabayDao(): PixabayDao
     abstract fun remoteKeyDao(): RemoteKeysDao
-
 }

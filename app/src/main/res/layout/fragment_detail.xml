@@ -15,6 +15,7 @@
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_main_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@color/white">
@@ -76,7 +77,7 @@
                 android:drawablePadding="10dp"
                 android:gravity="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small"
-                app:drawableLeftCompat="@drawable/ic_download"
+                app:drawableLeftCompat="@drawable/ic_baseline_cloud_download_24"
                 app:layout_constraintEnd_toStartOf="@+id/textViewComments"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/textViewViews"

@@ -6,29 +6,22 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.view.animation.AnimationUtils
-import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.paging.ExperimentalPagingApi
 import com.example.codingtask.R
 import com.example.codingtask.databinding.FragmentImageBinding
 import com.example.codingtask.ui.adapter.MyPagingAdapter
-import com.example.codingtask.ui.adapter.PixabayAdapter
 import com.example.codingtask.ui.viewmodels.MainViewModel
-import com.example.codingtask.ui.viewmodels.PixabayViewModel
 import com.example.codingtask.utils.InternetStatus
-import com.example.codingtask.utils.Resource
 import com.example.codingtask.utils.hideKeyboard
 import com.example.codingtask.utils.showSnackbar
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.fragment_image.*
 import kotlinx.coroutines.flow.collectLatest
-import timber.log.Timber
 import javax.inject.Inject
 
 @AndroidEntryPoint
@@ -38,34 +31,37 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
 //    private val viewModel: PixabayViewModel by viewModels()
     private val viewModel:MainViewModel by viewModels()
 
-    private lateinit var pixabayAdapter: PixabayAdapter
-    private var internetStatus:InternetStatus = InternetStatus()
 
     @Inject
+    lateinit var internetStatus:InternetStatus
+
+
     lateinit var myAdapter:MyPagingAdapter
 
 //    private var status: Boolean = false
 
-    @OptIn(ExperimentalPagingApi::class)
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
         binding = FragmentImageBinding.inflate(inflater, container, false)
-        pixabayAdapter  = PixabayAdapter(PixabayAdapter.OnClickListener { photo ->
+        myAdapter  = MyPagingAdapter(MyPagingAdapter.OnClickListener { photo ->
             val action = ImageFragmentDirections.actionImageFragmentToBottomSheet(photo)
             findNavController().navigate(action)
         })
 
 //        viewModel.searchQuery.value?.let { subscribeOnline(it) }
+        viewModel.searchQuery.value?.let { searchImage("fruits") }
 
         binding.searchLayout.setEndIconOnClickListener {
 
             if (internetStatus.isOnline(requireContext())){
                 Log.d("connect", "Internet is  connected")
-//                subscribeOnline(binding.searchLayout.editText?.text.toString())
+                searchImage(binding.searchLayout.editText?.text.toString())
                 binding.progressBar.isVisible = true
                 hideKeyboard()
+                //Make search bar invisibile
+                setVisibility()
             }
             else
             {
@@ -74,16 +70,6 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
         }
 
         binding.imageRecycler.adapter = myAdapter
-        lifecycleScope.launchWhenStarted {
-
-            viewModel.getAllImages().collectLatest { response ->
-
-                binding.imageRecycler.visibility = View.VISIBLE
-                binding.progressBar.visibility = View.GONE
-
-                myAdapter.submitData(response)
-            }
-        }
 
         binding.imageFramgnet = this
         return binding.root
@@ -91,17 +77,34 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
 
     fun setVisibility(){
        if (binding.searchLayout.isVisible){
-           var slidUp = AnimationUtils.loadAnimation(requireContext(),R.anim.slide_up)
+           val slidUp = AnimationUtils.loadAnimation(requireContext(),R.anim.slide_up)
            binding.searchLayout.startAnimation(slidUp)
            binding.searchLayout.visibility = View.GONE
+
        }
        else
        {
-           var falldown = AnimationUtils.loadAnimation(requireContext(),R.anim.fall_down)
+           val falldown = AnimationUtils.loadAnimation(requireContext(),R.anim.fall_down)
+           binding.search.setText("")
            binding.searchLayout.visibility = View.VISIBLE
            binding.searchLayout.startAnimation(falldown)
        }
    }
+
+    @OptIn(ExperimentalPagingApi::class)
+    private fun searchImage(query: String){
+
+        lifecycleScope.launchWhenStarted {
+
+            viewModel.getAllImages(query).collectLatest { response ->
+
+                binding.imageRecycler.visibility = View.VISIBLE
+                binding.progressBar.visibility = View.GONE
+
+                myAdapter.submitData(response)
+            }
+        }
+    }
     /*
     private fun subscribeOnline(query: String) {
         viewLifecycleOwner.lifecycleScope.launchWhenStarted {
@@ -137,7 +140,7 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
     */
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("TAG","Image fragment onDestroy is called.")
+//        Log.d("TAG","Image fragment onDestroy is called.")
     }
 }
 

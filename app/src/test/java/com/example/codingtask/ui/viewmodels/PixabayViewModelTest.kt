@@ -1,12 +1,10 @@
 package com.example.codingtask.ui.viewmodels
 
-import android.util.Log
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.example.codingtask.data.local.entity.Pixabay
 import com.example.codingtask.data.local.repository.FakePixabayRepository
+import com.google.common.truth.Truth.assertThat
 import kotlinx.coroutines.runBlocking
-import org.hamcrest.CoreMatchers.*
-import org.hamcrest.MatcherAssert.assertThat
 import org.junit.After
 import org.junit.Before
 import org.junit.Rule
@@ -31,17 +29,17 @@ class PixabayViewModelTest{
     @Test
      fun `check correct values` () = runBlocking{
 
-        val data = mutableListOf<Pixabay>()
+        val data = mutableListOf<List<Pixabay>>()
 //        var list = mutableListOf<Resource<List<Pixabay>>>()
 
-        var list = viewModel.getImages("fruits").collect{
-            Log.d("values", " = ${it.data}")
+       viewModel.getImages("fruits").collect{
+//            Log.d("values", " = ${it.data}")
+           data.add(it.data!!)
+
         }
 
-        assertThat(list,`is`(data))
+        assertThat(data.size>0).isTrue()
 
-//        assertThat(list, hasItem(data))
-//        assertThat(list,is(data))
      }
 
     @Test
@@ -51,7 +49,8 @@ class PixabayViewModelTest{
         val expected: List<String> = Arrays.asList("a", "b", "c")
 
         //1. Test equal.
-        assertThat(actual, `is`(expected))
+//        assertThat(actual, `is`(expected))
+        assertThat(actual == expected).isTrue()
     }
 
     @After

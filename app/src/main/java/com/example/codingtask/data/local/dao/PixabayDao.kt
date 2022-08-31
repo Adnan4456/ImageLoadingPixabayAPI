@@ -11,8 +11,8 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface PixabayDao {
 
-    @Query("SELECT * FROM pixabay_table")
-    fun fetchAllImages(): Flow<List<Pixabay>>
+//    @Query("SELECT * FROM pixabay_table")
+//    fun fetchAllImages(): Flow<List<Pixabay>>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun saveImage(pixabay: List<Pixabay>)
@@ -21,7 +21,7 @@ interface PixabayDao {
     suspend fun insertRecord(pixabay: Pixabay)
 
     @Query("DELETE FROM pixabay_table")
-    suspend fun deleteAll()
+    suspend fun deleteAll() : Int
 
     @Query("SELECT * FROM pixabay_table WHERE tags OR previewURL OR pageURL LIKE '%' || :query || '%'")
 //    suspend fun fetchImages(query: String?): List<Pixabay>
