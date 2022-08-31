@@ -15,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.paging.ExperimentalPagingApi
 import com.example.codingtask.R
 import com.example.codingtask.databinding.FragmentImageBinding
+import com.example.codingtask.ui.adapter.LoadingStateAdapter
 import com.example.codingtask.ui.adapter.MyPagingAdapter
 import com.example.codingtask.ui.viewmodels.MainViewModel
 import com.example.codingtask.utils.InternetStatus
@@ -69,7 +70,10 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
             }
         }
 
-        binding.imageRecycler.adapter = myAdapter
+        binding.imageRecycler.adapter = myAdapter.withLoadStateHeaderAndFooter(
+            header = LoadingStateAdapter{myAdapter.retry()},
+            footer = LoadingStateAdapter{myAdapter.retry()}
+        )
 
         binding.imageFramgnet = this
         return binding.root
