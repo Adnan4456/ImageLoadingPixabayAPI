@@ -4,11 +4,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="imageFramgnet"
             type="com.example.codingtask.ui.fragments.ImageFragment" />
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -29,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:gravity="center"
-                android:text="Coding Task"
+                android:text="Image Loader"
                 android:textColor="@color/white"
                 android:textSize="30sp" />
         </RelativeLayout>
