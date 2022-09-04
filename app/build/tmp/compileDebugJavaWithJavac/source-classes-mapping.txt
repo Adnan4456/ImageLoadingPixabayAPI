@@ -13,16 +13,16 @@ com/example/codingtask/ui/fragments/DetailFragmentArgs.java
 com/example/codingtask/ui/viewmodels/MainViewModel_HiltModules_KeyModule_ProvideFactory.java
  com.example.codingtask.ui.viewmodels.MainViewModel_HiltModules_KeyModule_ProvideFactory
  com.example.codingtask.ui.viewmodels.MainViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
-hilt_aggregated_deps/_com_example_codingtask_di_NetworkModule.java
- hilt_aggregated_deps._com_example_codingtask_di_NetworkModule
+com/example/codingtask/ui/fragments/ImageFragment_MembersInjector.java
+ com.example.codingtask.ui.fragments.ImageFragment_MembersInjector
 com/example/codingtask/data/local/repository/PixabayRepository_Factory.java
  com.example.codingtask.data.local.repository.PixabayRepository_Factory
-hilt_aggregated_deps/_com_example_codingtask_ui_viewmodels_MainViewModel_HiltModules_BindsModule.java
- hilt_aggregated_deps._com_example_codingtask_ui_viewmodels_MainViewModel_HiltModules_BindsModule
+androidx/databinding/DataBinderMapperImpl.java
+ androidx.databinding.DataBinderMapperImpl
 hilt_aggregated_deps/_com_example_codingtask_ui_activity_MainActivity_GeneratedInjector.java
  hilt_aggregated_deps._com_example_codingtask_ui_activity_MainActivity_GeneratedInjector
-com/example/codingtask/di/DatabaseModule_RemoteKeysDaoFactory.java
- com.example.codingtask.di.DatabaseModule_RemoteKeysDaoFactory
+com/example/codingtask/ui/fragments/ImageFragment_GeneratedInjector.java
+ com.example.codingtask.ui.fragments.ImageFragment_GeneratedInjector
 hilt_aggregated_deps/_com_example_codingtask_PixabayApplication_GeneratedInjector.java
  hilt_aggregated_deps._com_example_codingtask_PixabayApplication_GeneratedInjector
 androidx/databinding/library/baseAdapters/BR.java
@@ -39,8 +39,8 @@ com/example/codingtask/ui/fragments/BottomSheetDirections.java
  com.example.codingtask.ui.fragments.BottomSheetDirections$ActionBottomSheetToDetailFragment
 com/example/codingtask/DataBindingTriggerClass.java
  com.example.codingtask.DataBindingTriggerClass
-androidx/databinding/DataBindingComponent.java
- androidx.databinding.DataBindingComponent
+com/example/codingtask/ui/fragments/MainNavHostFragment_GeneratedInjector.java
+ com.example.codingtask.ui.fragments.MainNavHostFragment_GeneratedInjector
 com/example/codingtask/ui/viewmodels/PixabayViewModel_HiltModules_KeyModule_ProvideFactory.java
  com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules_KeyModule_ProvideFactory
  com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
@@ -55,6 +55,8 @@ com/example/codingtask/ui/viewmodels/MainViewModel_HiltModules.java
  com.example.codingtask.ui.viewmodels.MainViewModel_HiltModules
  com.example.codingtask.ui.viewmodels.MainViewModel_HiltModules$BindsModule
  com.example.codingtask.ui.viewmodels.MainViewModel_HiltModules$KeyModule
+com/example/codingtask/databinding/ErrorStateBinding.java
+ com.example.codingtask.databinding.ErrorStateBinding
 com/example/codingtask/PixabayApplication_ComponentTreeDeps.java
  com.example.codingtask.PixabayApplication_ComponentTreeDeps
 com/example/codingtask/di/NetworkModule_ProvidesHttpLoggingInterceptorFactory.java
@@ -63,6 +65,8 @@ com/example/codingtask/di/NetworkModule_ProvidesHttpLoggingInterceptorFactory.ja
 com/example/codingtask/utils/InternetStatus_Factory.java
  com.example.codingtask.utils.InternetStatus_Factory
  com.example.codingtask.utils.InternetStatus_Factory$InstanceHolder
+com/example/codingtask/databinding/ErrorStateBindingImpl.java
+ com.example.codingtask.databinding.ErrorStateBindingImpl
 com/example/codingtask/data/local/dao/PixabayDao_Impl.java
  com.example.codingtask.data.local.dao.PixabayDao_Impl
  com.example.codingtask.data.local.dao.PixabayDao_Impl$1
@@ -72,8 +76,9 @@ com/example/codingtask/data/local/dao/PixabayDao_Impl.java
  com.example.codingtask.data.local.dao.PixabayDao_Impl$5
  com.example.codingtask.data.local.dao.PixabayDao_Impl$6
  com.example.codingtask.data.local.dao.PixabayDao_Impl$7
-hilt_aggregated_deps/_com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_BindsModule.java
- hilt_aggregated_deps._com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_BindsModule
+com/example/codingtask/ui/fragments/MainFragmentFactory_Factory.java
+ com.example.codingtask.ui.fragments.MainFragmentFactory_Factory
+ com.example.codingtask.ui.fragments.MainFragmentFactory_Factory$InstanceHolder
 com/example/codingtask/data/local/dao/RemoteKeysDao_Impl.java
  com.example.codingtask.data.local.dao.RemoteKeysDao_Impl
  com.example.codingtask.data.local.dao.RemoteKeysDao_Impl$1
@@ -82,15 +87,14 @@ com/example/codingtask/data/local/dao/RemoteKeysDao_Impl.java
 com/example/codingtask/Hilt_PixabayApplication.java
  com.example.codingtask.Hilt_PixabayApplication
  com.example.codingtask.Hilt_PixabayApplication$1
-com/example/codingtask/databinding/ImageItemBindingImpl.java
- com.example.codingtask.databinding.ImageItemBindingImpl
+com/example/codingtask/databinding/FragmentImageBinding.java
+ com.example.codingtask.databinding.FragmentImageBinding
 hilt_aggregated_deps/_com_example_codingtask_ui_fragments_MainNavHostFragment_GeneratedInjector.java
  hilt_aggregated_deps._com_example_codingtask_ui_fragments_MainNavHostFragment_GeneratedInjector
-hilt_aggregated_deps/_com_example_codingtask_di_DatabaseModule.java
- hilt_aggregated_deps._com_example_codingtask_di_DatabaseModule
-com/example/codingtask/di/NetworkModule_ProvidesRetrofitFactory.java
- com.example.codingtask.di.NetworkModule_ProvidesRetrofitFactory
- com.example.codingtask.di.NetworkModule_ProvidesRetrofitFactory$InstanceHolder
+com/example/codingtask/ui/fragments/Hilt_ImageFragment.java
+ com.example.codingtask.ui.fragments.Hilt_ImageFragment
+com/example/codingtask/ui/fragments/Hilt_MainNavHostFragment.java
+ com.example.codingtask.ui.fragments.Hilt_MainNavHostFragment
 com/example/codingtask/di/DatabaseModule_ProvidesDbFactory.java
  com.example.codingtask.di.DatabaseModule_ProvidesDbFactory
 com/example/codingtask/BR.java
@@ -116,53 +120,16 @@ com/example/codingtask/ui/activity/Hilt_MainActivity.java
  com.example.codingtask.ui.activity.Hilt_MainActivity$1
 com/example/codingtask/databinding/FragmentDetailBindingLandImpl.java
  com.example.codingtask.databinding.FragmentDetailBindingLandImpl
-hilt_aggregated_deps/_com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_KeyModule.java
- hilt_aggregated_deps._com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_KeyModule
-com/example/codingtask/databinding/FragmentDetailBinding.java
- com.example.codingtask.databinding.FragmentDetailBinding
-com/example/codingtask/ui/fragments/ImageFragmentDirections.java
- com.example.codingtask.ui.fragments.ImageFragmentDirections
- com.example.codingtask.ui.fragments.ImageFragmentDirections$1
- com.example.codingtask.ui.fragments.ImageFragmentDirections$ActionImageFragmentToBottomSheet
-com/example/codingtask/BuildConfig.java
- com.example.codingtask.BuildConfig
-com/example/codingtask/ui/viewmodels/PixabayViewModel_Factory.java
- com.example.codingtask.ui.viewmodels.PixabayViewModel_Factory
-com/example/codingtask/data/local/db/PixabayDb_Impl.java
- com.example.codingtask.data.local.db.PixabayDb_Impl
- com.example.codingtask.data.local.db.PixabayDb_Impl$1
-com/example/codingtask/di/DatabaseModule_ProvidesDaoFactory.java
- com.example.codingtask.di.DatabaseModule_ProvidesDaoFactory
-com/example/codingtask/databinding/ImageItemBinding.java
- com.example.codingtask.databinding.ImageItemBinding
-com/example/codingtask/PixabayApplication_GeneratedInjector.java
- com.example.codingtask.PixabayApplication_GeneratedInjector
-hilt_aggregated_deps/_com_example_codingtask_ui_fragments_DetailFragment_GeneratedInjector.java
- hilt_aggregated_deps._com_example_codingtask_ui_fragments_DetailFragment_GeneratedInjector
-com/example/codingtask/ui/fragments/Hilt_ImageFragment.java
- com.example.codingtask.ui.fragments.Hilt_ImageFragment
-com/example/codingtask/ui/fragments/MainNavHostFragment_GeneratedInjector.java
- com.example.codingtask.ui.fragments.MainNavHostFragment_GeneratedInjector
-com/example/codingtask/ui/fragments/Hilt_MainNavHostFragment.java
- com.example.codingtask.ui.fragments.Hilt_MainNavHostFragment
-com/example/codingtask/ui/fragments/ImageFragment_MembersInjector.java
- com.example.codingtask.ui.fragments.ImageFragment_MembersInjector
-androidx/databinding/DataBinderMapperImpl.java
- androidx.databinding.DataBinderMapperImpl
-com/example/codingtask/ui/fragments/ImageFragment_GeneratedInjector.java
- com.example.codingtask.ui.fragments.ImageFragment_GeneratedInjector
-com/example/codingtask/databinding/ErrorStateBinding.java
- com.example.codingtask.databinding.ErrorStateBinding
 com/example/codingtask/DataBinderMapperImpl.java
  com.example.codingtask.DataBinderMapperImpl
  com.example.codingtask.DataBinderMapperImpl$InnerBrLookup
  com.example.codingtask.DataBinderMapperImpl$InnerLayoutIdLookup
-com/example/codingtask/databinding/ErrorStateBindingImpl.java
- com.example.codingtask.databinding.ErrorStateBindingImpl
-com/example/codingtask/ui/fragments/MainNavHostFragment_MembersInjector.java
- com.example.codingtask.ui.fragments.MainNavHostFragment_MembersInjector
+com/example/codingtask/databinding/FragmentDetailBinding.java
+ com.example.codingtask.databinding.FragmentDetailBinding
 com/example/codingtask/databinding/FragmentImageBindingImpl.java
  com.example.codingtask.databinding.FragmentImageBindingImpl
+com/example/codingtask/BuildConfig.java
+ com.example.codingtask.BuildConfig
 com/example/codingtask/DaggerPixabayApplication_HiltComponents_SingletonC.java
  com.example.codingtask.DaggerPixabayApplication_HiltComponents_SingletonC
  com.example.codingtask.DaggerPixabayApplication_HiltComponents_SingletonC$1
@@ -184,13 +151,8 @@ com/example/codingtask/DaggerPixabayApplication_HiltComponents_SingletonC.java
  com.example.codingtask.DaggerPixabayApplication_HiltComponents_SingletonC$ViewModelCImpl$SwitchingProvider
  com.example.codingtask.DaggerPixabayApplication_HiltComponents_SingletonC$ViewWithFragmentCBuilder
  com.example.codingtask.DaggerPixabayApplication_HiltComponents_SingletonC$ViewWithFragmentCImpl
-com/example/codingtask/ui/fragments/MainFragmentFactory_Factory.java
- com.example.codingtask.ui.fragments.MainFragmentFactory_Factory
- com.example.codingtask.ui.fragments.MainFragmentFactory_Factory$InstanceHolder
 com/example/codingtask/databinding/FragmentImageBindingLandImpl.java
  com.example.codingtask.databinding.FragmentImageBindingLandImpl
-com/example/codingtask/databinding/FragmentImageBinding.java
- com.example.codingtask.databinding.FragmentImageBinding
 com/example/codingtask/PixabayApplication_HiltComponents.java
  com.example.codingtask.PixabayApplication_HiltComponents
  com.example.codingtask.PixabayApplication_HiltComponents$ActivityC
@@ -215,3 +177,41 @@ com/example/codingtask/PixabayApplication_HiltComponents.java
  com.example.codingtask.PixabayApplication_HiltComponents$ViewWithFragmentC
  com.example.codingtask.PixabayApplication_HiltComponents$ViewWithFragmentC$Builder
  com.example.codingtask.PixabayApplication_HiltComponents$ViewWithFragmentCBuilderModule
+com/example/codingtask/databinding/ImageItemBinding.java
+ com.example.codingtask.databinding.ImageItemBinding
+com/example/codingtask/PixabayApplication_GeneratedInjector.java
+ com.example.codingtask.PixabayApplication_GeneratedInjector
+hilt_aggregated_deps/_com_example_codingtask_ui_fragments_DetailFragment_GeneratedInjector.java
+ hilt_aggregated_deps._com_example_codingtask_ui_fragments_DetailFragment_GeneratedInjector
+com/example/codingtask/di/DatabaseModule_ProvidesDaoFactory.java
+ com.example.codingtask.di.DatabaseModule_ProvidesDaoFactory
+com/example/codingtask/databinding/ImageItemBindingImpl.java
+ com.example.codingtask.databinding.ImageItemBindingImpl
+com/example/codingtask/data/local/db/PixabayDb_Impl.java
+ com.example.codingtask.data.local.db.PixabayDb_Impl
+ com.example.codingtask.data.local.db.PixabayDb_Impl$1
+hilt_aggregated_deps/_com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_BindsModule.java
+ hilt_aggregated_deps._com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_BindsModule
+com/example/codingtask/ui/viewmodels/PixabayViewModel_Factory.java
+ com.example.codingtask.ui.viewmodels.PixabayViewModel_Factory
+com/example/codingtask/ui/fragments/ImageFragmentDirections.java
+ com.example.codingtask.ui.fragments.ImageFragmentDirections
+ com.example.codingtask.ui.fragments.ImageFragmentDirections$1
+ com.example.codingtask.ui.fragments.ImageFragmentDirections$ActionImageFragmentToBottomSheet
+hilt_aggregated_deps/_com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_KeyModule.java
+ hilt_aggregated_deps._com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_KeyModule
+com/example/codingtask/ui/fragments/MainNavHostFragment_MembersInjector.java
+ com.example.codingtask.ui.fragments.MainNavHostFragment_MembersInjector
+com/example/codingtask/di/DatabaseModule_RemoteKeysDaoFactory.java
+ com.example.codingtask.di.DatabaseModule_RemoteKeysDaoFactory
+hilt_aggregated_deps/_com_example_codingtask_ui_viewmodels_MainViewModel_HiltModules_BindsModule.java
+ hilt_aggregated_deps._com_example_codingtask_ui_viewmodels_MainViewModel_HiltModules_BindsModule
+hilt_aggregated_deps/_com_example_codingtask_di_NetworkModule.java
+ hilt_aggregated_deps._com_example_codingtask_di_NetworkModule
+com/example/codingtask/di/NetworkModule_ProvidesRetrofitFactory.java
+ com.example.codingtask.di.NetworkModule_ProvidesRetrofitFactory
+ com.example.codingtask.di.NetworkModule_ProvidesRetrofitFactory$InstanceHolder
+androidx/databinding/DataBindingComponent.java
+ androidx.databinding.DataBindingComponent
+hilt_aggregated_deps/_com_example_codingtask_di_DatabaseModule.java
+ hilt_aggregated_deps._com_example_codingtask_di_DatabaseModule

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v27\\values-v27.xml",
+            "outputFile": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v27\\values-v27.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Adnan Khan\\.gradle\\caches\\transforms-3\\c1f61725db821586f2dd30fc65b7a5ff\\transformed\\jetified-core-splashscreen-1.0.0-beta02\\res\\values-v27\\values-v27.xml",
+                    "source": "C:\\Users\\Adnan\\.gradle\\caches\\transforms-3\\c1f61725db821586f2dd30fc65b7a5ff\\transformed\\jetified-core-splashscreen-1.0.0-beta02\\res\\values-v27\\values-v27.xml",
                     "from": {
                         "startLines": "2,3,4,7",
                         "startColumns": "4,4,4,4",
