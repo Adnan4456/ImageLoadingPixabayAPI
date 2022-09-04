@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">507237780432-gvn4o0hvte15bd5iqsmu0ogmh21ua5kr.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">507237780432</string>
+    <string name="google_api_key" translatable="false">AIzaSyBJN_9mEE9tV5w6jDwUk87tmX63VuzDW-c</string>
+    <string name="google_app_id" translatable="false">1:507237780432:android:434097d84b8e99dbfe07d5</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyBJN_9mEE9tV5w6jDwUk87tmX63VuzDW-c</string>
+    <string name="google_storage_bucket" translatable="false">pixabay-e3034.appspot.com</string>
+    <string name="project_id" translatable="false">pixabay-e3034</string>
+</resources>

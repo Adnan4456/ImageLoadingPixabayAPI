@@ -1,0 +1,214 @@
+[
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout_error_state.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\error_state.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_search.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\fragment_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\navigation_nav_graph.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\navigation\\nav_graph.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_in_right.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\slide_in_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_image.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\image.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_search.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_search.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_in_left.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\slide_in_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_out_right.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\slide_out_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_detail.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\fragment_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_recycler_view_animation.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\recycler_view_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_out_left.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\slide_out_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout-land_fragment_detail.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout-land\\fragment_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_download.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_download.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_up.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\slide_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_slide_in.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\slide_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout_image_item.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\image_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_image.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\fragment_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout_fragment_confirm_dialog.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\fragment_confirm_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_drop_down.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_drop_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout-land_fragment_confirm_dialog.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout-land\\fragment_confirm_dialog.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_circular_image.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\circular_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout-land_activity_main.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout-land\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_layout_animation.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\layout_animation.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_person.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_person.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_fall_down.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\fall_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_eye.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_eye.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_left_to_right.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\left_to_right.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_bg_gredient.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\bg_gredient.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_baseline_cloud_download_24.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_baseline_cloud_download_24.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\layout-land_fragment_image.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout-land\\fragment_image.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_round_button.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\round_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_round_edittext.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\round_edittext.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\anim_right_to_left.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\anim\\right_to_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_search_white.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_search_white.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_thumbs_up.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_thumbs_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_comments.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_comments.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_animatorvectordrawable.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\animatorvectordrawable.xml"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_drop_up.xml.flat",
+        "source": "C:\\Users\\Adnan Khan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\drawable\\ic_drop_up.xml"
+    }
+]
