@@ -1,6 +1,8 @@
 ## Pixabay App
 - Android  application written with kotlin programming language.
-- Consumes  Pixabay API to fetch and display a list of images using paging 3 library.
+- Fetch images from server and save into Room database with Paging 3 library.
+- Create the object of fragments with factory method and inject to NavHostFragment using Hilt.
+- Use two way data binding and binding adapters to download images.
 <br>
 
 Minimum API level supported is: 23
@@ -30,7 +32,7 @@ Minimum API level supported is: 23
  * [Kotlin](https://developer.android.com/kotlin) - Cross-platform, statically type, general purpose programming language with type inference.
  * [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - Paging 3 library helps to load large data from server or local database into small chunks.
  * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Dependency injection library for android.
- * [NavigationComponets](https://developer.android.com/guide/navigation/navigation-getting-started) - Make .
+ * [NavigationComponets](https://developer.android.com/guide/navigation/navigation-getting-started) 
  * [Retrofit](https://square.github.io/retrofit/) - A Type-safe HTTP client for android and java used to consume REST APIs.
  * [Gson](https://github.com/google/gson) - Used to convert Json to java and kotlin objects.
  * [Glide](https://github.com/bumptech/glide) - Image loader library for android.
