@@ -30,7 +30,7 @@ Minimum API level supported is: 23
  * [Kotlin](https://developer.android.com/kotlin) - Cross-platform, statically type, general purpose programming language with type inference.
  * [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - Paging 3 library helps to load large data from server or local database into small chunks.
  * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Dependency injection library for android.
- * [NavigationComponets](https://developer.android.com/guide/navigation/navigation-getting-started) - Provide easy navigation with Hilt fragment injection.
+ * [NavigationComponets](https://developer.android.com/guide/navigation/navigation-getting-started) - Make .
  * [Retrofit](https://square.github.io/retrofit/) - A Type-safe HTTP client for android and java used to consume REST APIs.
  * [Gson](https://github.com/google/gson) - Used to convert Json to java and kotlin objects.
  * [Glide](https://github.com/bumptech/glide) - Image loader library for android.
