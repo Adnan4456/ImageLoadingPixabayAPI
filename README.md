@@ -1,6 +1,7 @@
 ## Pixabay App
 - Android  application written with kotlin programming language.
 - Fetch images from server and save into Room database with Paging 3 library.
+- Implement Paging 3 loading state adapter to resume the unloaded page due to any error.
 - Create the object of fragments with factory method and inject to NavHostFragment using Hilt.
 - Use two way data binding and binding adapters to download images.
 <br>
