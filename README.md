@@ -37,6 +37,7 @@ Minimum API level supported is: 23
  * [Retrofit](https://square.github.io/retrofit/) - A Type-safe HTTP client for android and java used to consume REST APIs.
  * [Gson](https://github.com/google/gson) - Used to convert Json to java and kotlin objects.
  * [Glide](https://github.com/bumptech/glide) - Image loader library for android.
+ * [Diff Utill Adapter] - This class finds the difference between two lists and provides the updated list as an output.
  * [Room Database](https://developer.android.com/training/data-storage/room) -  Provides abstraction layer over SQLite.
  * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - A lifecycle-aware data holder with the observer pattern.
  * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Used to store and manage UI related data in a lifecycle concious way.
@@ -47,7 +48,7 @@ Minimum API level supported is: 23
  * [MockWebServer](https://kotlintesting.com/testing-retrofit-calls) - A mock web server is a program that mocks the behavior of an actual Retrofit API  but doesn’t make calls over the internet.It is used to Test Retrofit
  * [JUnit] - JUnit is a simple framework to write test the logic of program like Room database  , ViewModel and Repository.
  * [Espresso] - write small and reliable Android UI tests.
- * [Binding Adapters] 
+ * [Binding Adapters] - Use to load image using  Glide library in different class.
 <br>
 
 <img src="assets/fruit.png">
