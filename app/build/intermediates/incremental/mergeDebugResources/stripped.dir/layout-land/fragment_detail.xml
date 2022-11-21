@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+                                                              
+                                                       
+                                                   
+
+    
+                 
+                       
+                                                                      
+
+                 
+                                 
+                                                                        
+           
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:tag="layout-land/fragment_detail_0" xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="230dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:scaleType="centerCrop"
+                android:transitionName="@string/image_large"
+                app:layout_constraintHorizontal_bias="0.5"
+                tools:src="@tools:sample/avatars"
+                android:tag="binding_1"            
+                android:foreground="?selectableItemBackground"/>
+
+            <TextView
+                android:id="@+id/textViewLikes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:drawableLeftCompat="@drawable/ic_thumbs_up"
+                app:layout_constraintEnd_toStartOf="@+id/textViewViews"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageView"
+                android:tag="binding_2"                   
+                />
+
+            <TextView
+                android:id="@+id/textViewViews"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:drawableLeftCompat="@drawable/ic_eye"
+                app:layout_constraintEnd_toStartOf="@+id/textViewDownloads"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewLikes"
+                app:layout_constraintTop_toTopOf="@+id/textViewLikes"
+                android:tag="binding_3"                   
+
+                />
+
+            <TextView
+                android:id="@+id/textViewDownloads"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:drawableLeftCompat="@drawable/ic_download"
+                app:layout_constraintEnd_toStartOf="@+id/textViewComments"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewViews"
+                app:layout_constraintTop_toTopOf="@+id/textViewViews"
+                android:tag="binding_4"                       
+                />
+
+            <TextView
+                android:id="@+id/textViewComments"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:drawablePadding="10dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                app:drawableLeftCompat="@drawable/ic_comments"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/textViewDownloads"
+                app:layout_constraintTop_toTopOf="@+id/textViewDownloads"
+                android:tag="binding_5"                      
+                />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewLikes">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:foreground="?selectableItemBackground"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:text="@string/picture_contributor"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                        android:textStyle="bold"
+                        android:layout_marginTop="2dp"
+                        android:textColor="@color/black"
+                        android:tag="binding_6"  
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/imageViewLayout"
+                        android:layout_marginTop="7dp"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        app:cardCornerRadius="100dp"
+                        android:background="@drawable/round_edittext"
+                        android:layout_centerHorizontal="true"
+                        app:layout_constraintStart_toStartOf="@+id/textView6"
+                        app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageViewUser"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            tools:src="@tools:sample/avatars"
+                            android:tag="binding_7"            
+                            app:layout_constraintStart_toStartOf="@+id/textView6"
+                            app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:id="@+id/dropdown"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:background="@drawable/round_edittext"
+                        android:src="@drawable/ic_drop_down"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:tint="@color/teal_700"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageViewLayout"
+                        android:foreground ="?selectableItemBackground"
+                        android:tag="binding_8"                                    
+
+                        />
+                    <!--            app:layout_constraintTop_toBottomOf="@+id/imageViewLayout"-->
+                    <LinearLayout
+                        android:id="@+id/expandableLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:visibility="gone"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageViewLayout">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/tags"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Tags of Image"
+                            android:textColor="@color/white"
+                            android:textSize="20sp"
+                            android:padding="8dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@color/teal_700"
+                            tools:layout_editor_absoluteX="146dp"
+                            tools:layout_editor_absoluteY="537dp" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
+                            android:layout_marginTop="5dp"
+                            android:tag="binding_9"                  
+                            />
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+         

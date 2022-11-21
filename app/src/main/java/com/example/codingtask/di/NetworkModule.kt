@@ -1,10 +1,7 @@
 package com.example.codingtask.di
 
-import com.example.codingtask.data.local.db.PixabayDb
-import com.example.codingtask.data.local.repository.PixabayRepository
 import com.example.codingtask.data.remote.PixabayApi
 import com.example.codingtask.utils.Constants.Companion.BASE_URL
-import com.example.codingtask.utils.RepositoryInterface
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -19,12 +16,12 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object NetworkModule {
 
-    @Provides
-    @Singleton
-    fun provideRepositoryInterface(
-        pixabayApi: PixabayApi,
-        pixabayDatabase: PixabayDb
-        ) = PixabayRepository(pixabayApi ,pixabayDatabase) as RepositoryInterface
+//    @Provides
+//    @Singleton
+//    fun provideRepositoryInterface(
+//        pixabayApi: PixabayApi,
+//        pixabayDatabase: PixabayDb
+//        ) = PixabayRepository(pixabayApi ,pixabayDatabase) as RepositoryInterface
 
     @Provides
     @Singleton
@@ -52,12 +49,3 @@ object NetworkModule {
             .build()
     }
 }
-
-/*
-* Hilt Dependency Injection -
-* Hilt Application class - all apps in hilt should contain the application class
-* Annotated with @HiltAndroidApp
-*
-*
-*
-* */

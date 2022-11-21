@@ -1,6 +1,5 @@
 package com.example.codingtask.data.local.repository
 
-import android.util.Log
 import androidx.paging.ExperimentalPagingApi
 import androidx.paging.LoadType
 import androidx.paging.PagingState
@@ -12,7 +11,6 @@ import com.example.codingtask.data.local.entity.RemoteKeys
 import com.example.codingtask.data.remote.PixabayApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import okhttp3.internal.wait
 import retrofit2.HttpException
 import java.io.IOException
 
@@ -21,8 +19,7 @@ class PixabayMediator constructor(
     private val db: PixabayDb ,
     private val apiService: PixabayApi,
     private val tag:String
-)
-    :  RemoteMediator<Int , Pixabay>(){
+) :RemoteMediator<Int , Pixabay>(){
 
     private val index = 1
 
@@ -49,8 +46,7 @@ class PixabayMediator constructor(
 
             val response = apiService.fetchImages(tag,page, state.config.pageSize)
             val list = response.hits
-//            Log.d("TAG"," size = ${list.size}")
-//            Log.d("TAG"," tags =   $tag")
+
             val isEndOfList = list.isEmpty()
 
             //it is a suspend function
@@ -85,12 +81,12 @@ class PixabayMediator constructor(
 
             LoadType.REFRESH ->{
                 val remoteKey = getRefreshRemoteKey(state)
-                remoteKey?.nextKey?.minus(1)?: index
+                remoteKey?.nextKey?.minus(1)?: 1
             }
             LoadType.PREPEND->{
                 val remoteKey = getFirstRemoteKeys(state)
                 val prevKey = remoteKey?.prevKey ?: MediatorResult.Success(
-                    endOfPaginationReached = false
+                    endOfPaginationReached = remoteKey != null
                 )
                 prevKey
             }
@@ -99,16 +95,17 @@ class PixabayMediator constructor(
 
                 val remoteKey = getLastRemoteKey(state)
                 val nextKey = remoteKey?.nextKey ?: MediatorResult.Success(
-                endOfPaginationReached = true
+                endOfPaginationReached = remoteKey != null
                 )
                 nextKey
             }
         }
     }
 
-    private suspend fun getFirstRemoteKeys(state: PagingState<Int, Pixabay>)
+    private suspend fun getFirstRemoteKeys(
+        state: PagingState<Int, Pixabay>)
         :RemoteKeys? {
-        //first add data
+
         return withContext(Dispatchers.IO) //for preform task in background
         {
             state.pages
@@ -116,7 +113,7 @@ class PixabayMediator constructor(
                     it.data.isNotEmpty()
                 }?.data?.firstOrNull()
                 ?.let { pixabay ->
-                    db.remoteKeyDao().getAllRemoteKeys(pixabay.id)
+                    db.remoteKeyDao().getAllRemoteKeys(id = pixabay.id)
                 }
         }
     }
@@ -124,24 +121,26 @@ class PixabayMediator constructor(
     private suspend fun getLastRemoteKey(state: PagingState<Int, Pixabay>)
             :RemoteKeys? {
 
+        //run it in different coroutine context
         return withContext(Dispatchers.IO){
             state.pages
                 .lastOrNull{
                     it.data.isNotEmpty()
                 }?.data?.lastOrNull()
                 ?.let { pixabay ->
-                    db.remoteKeyDao().getAllRemoteKeys(pixabay.id)
-                }
+                    db.remoteKeyDao().getAllRemoteKeys(id = pixabay.id)
+                 }
         }
     }
 
-    private suspend fun getRefreshRemoteKey(state: PagingState<Int, Pixabay>)
+    private suspend fun getRefreshRemoteKey(
+        state: PagingState<Int, Pixabay>)
     :RemoteKeys?{
 
         return withContext(Dispatchers.IO){
             state.anchorPosition?.let { position ->
                 state.closestItemToPosition(position)?.id?.let { id ->
-                    db.remoteKeyDao().getAllRemoteKeys(id)
+                    db.remoteKeyDao().getAllRemoteKeys(id = id)
                 }
             }
         }

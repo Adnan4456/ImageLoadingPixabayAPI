@@ -15,8 +15,6 @@ com/example/codingtask/ui/viewmodels/MainViewModel_HiltModules_KeyModule_Provide
  com.example.codingtask.ui.viewmodels.MainViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
 com/example/codingtask/ui/fragments/ImageFragment_MembersInjector.java
  com.example.codingtask.ui.fragments.ImageFragment_MembersInjector
-com/example/codingtask/data/local/repository/PixabayRepository_Factory.java
- com.example.codingtask.data.local.repository.PixabayRepository_Factory
 androidx/databinding/DataBinderMapperImpl.java
  androidx.databinding.DataBinderMapperImpl
 hilt_aggregated_deps/_com_example_codingtask_ui_activity_MainActivity_GeneratedInjector.java
@@ -41,9 +39,6 @@ com/example/codingtask/DataBindingTriggerClass.java
  com.example.codingtask.DataBindingTriggerClass
 com/example/codingtask/ui/fragments/MainNavHostFragment_GeneratedInjector.java
  com.example.codingtask.ui.fragments.MainNavHostFragment_GeneratedInjector
-com/example/codingtask/ui/viewmodels/PixabayViewModel_HiltModules_KeyModule_ProvideFactory.java
- com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules_KeyModule_ProvideFactory
- com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules_KeyModule_ProvideFactory$InstanceHolder
 com/example/codingtask/databinding/FragmentDetailBindingImpl.java
  com.example.codingtask.databinding.FragmentDetailBindingImpl
 dagger/hilt/internal/processedrootsentinel/codegen/_com_example_codingtask_PixabayApplication.java
@@ -84,6 +79,8 @@ com/example/codingtask/data/local/dao/RemoteKeysDao_Impl.java
  com.example.codingtask.data.local.dao.RemoteKeysDao_Impl$1
  com.example.codingtask.data.local.dao.RemoteKeysDao_Impl$2
  com.example.codingtask.data.local.dao.RemoteKeysDao_Impl$3
+ com.example.codingtask.data.local.dao.RemoteKeysDao_Impl$4
+ com.example.codingtask.data.local.dao.RemoteKeysDao_Impl$5
 com/example/codingtask/Hilt_PixabayApplication.java
  com.example.codingtask.Hilt_PixabayApplication
  com.example.codingtask.Hilt_PixabayApplication$1
@@ -105,14 +102,8 @@ com/example/codingtask/ui/viewmodels/MainViewModel_Factory.java
  com.example.codingtask.ui.viewmodels.MainViewModel_Factory
 com/example/codingtask/ui/fragments/Hilt_DetailFragment.java
  com.example.codingtask.ui.fragments.Hilt_DetailFragment
-com/example/codingtask/di/NetworkModule_ProvideRepositoryInterfaceFactory.java
- com.example.codingtask.di.NetworkModule_ProvideRepositoryInterfaceFactory
 com/example/codingtask/ui/fragments/DetailFragment_GeneratedInjector.java
  com.example.codingtask.ui.fragments.DetailFragment_GeneratedInjector
-com/example/codingtask/ui/viewmodels/PixabayViewModel_HiltModules.java
- com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules
- com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules$BindsModule
- com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules$KeyModule
 hilt_aggregated_deps/_androidx_hilt_lifecycle_ViewModelFactoryModules_FragmentModuleModuleDeps.java
  hilt_aggregated_deps._androidx_hilt_lifecycle_ViewModelFactoryModules_FragmentModuleModuleDeps
 com/example/codingtask/ui/activity/Hilt_MainActivity.java
@@ -190,16 +181,10 @@ com/example/codingtask/databinding/ImageItemBindingImpl.java
 com/example/codingtask/data/local/db/PixabayDb_Impl.java
  com.example.codingtask.data.local.db.PixabayDb_Impl
  com.example.codingtask.data.local.db.PixabayDb_Impl$1
-hilt_aggregated_deps/_com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_BindsModule.java
- hilt_aggregated_deps._com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_BindsModule
-com/example/codingtask/ui/viewmodels/PixabayViewModel_Factory.java
- com.example.codingtask.ui.viewmodels.PixabayViewModel_Factory
 com/example/codingtask/ui/fragments/ImageFragmentDirections.java
  com.example.codingtask.ui.fragments.ImageFragmentDirections
  com.example.codingtask.ui.fragments.ImageFragmentDirections$1
  com.example.codingtask.ui.fragments.ImageFragmentDirections$ActionImageFragmentToBottomSheet
-hilt_aggregated_deps/_com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_KeyModule.java
- hilt_aggregated_deps._com_example_codingtask_ui_viewmodels_PixabayViewModel_HiltModules_KeyModule
 com/example/codingtask/ui/fragments/MainNavHostFragment_MembersInjector.java
  com.example.codingtask.ui.fragments.MainNavHostFragment_MembersInjector
 com/example/codingtask/di/DatabaseModule_RemoteKeysDaoFactory.java

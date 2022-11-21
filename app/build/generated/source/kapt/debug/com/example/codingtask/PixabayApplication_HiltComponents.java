@@ -8,7 +8,6 @@ import com.example.codingtask.ui.fragments.DetailFragment_GeneratedInjector;
 import com.example.codingtask.ui.fragments.ImageFragment_GeneratedInjector;
 import com.example.codingtask.ui.fragments.MainNavHostFragment_GeneratedInjector;
 import com.example.codingtask.ui.viewmodels.MainViewModel_HiltModules;
-import com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules;
 import dagger.Binds;
 import dagger.Component;
 import dagger.Module;
@@ -150,8 +149,7 @@ public final class PixabayApplication_HiltComponents {
           HiltWrapper_ActivityRetainedComponentManager_LifecycleModule.class,
           MainViewModel_HiltModules.KeyModule.class,
           ActivityCBuilderModule.class,
-          ViewModelCBuilderModule.class,
-          PixabayViewModel_HiltModules.KeyModule.class
+          ViewModelCBuilderModule.class
       }
   )
   @ActivityRetainedScoped
@@ -189,8 +187,7 @@ public final class PixabayApplication_HiltComponents {
   @Subcomponent(
       modules = {
           HiltWrapper_HiltViewModelFactory_ViewModelModule.class,
-          MainViewModel_HiltModules.BindsModule.class,
-          PixabayViewModel_HiltModules.BindsModule.class
+          MainViewModel_HiltModules.BindsModule.class
       }
   )
   @ViewModelScoped

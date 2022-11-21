@@ -8,8 +8,9 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 @Entity(tableName = "pixabay_table")
 data class Pixabay(
-    @PrimaryKey
+    @PrimaryKey(autoGenerate = false)
     val id: Int, //1
+
     val collections: Int, //2
     val comments: Int, //3
     val downloads: Int, //4
@@ -33,8 +34,8 @@ data class Pixabay(
     val webformatWidth: Int//22
 ): Parcelable
 
-/*
-Serialization - Process of converting data used by an application to a format that
-can be transferred over network and stored in database file
-Deserialization - reading data from data source and converting it into a runtime object
-*/
+
+
+//A parcel is highly optimized for local IPC (Inter-Process Communication —
+// You can get familiar with IPC here) also is not attempt to save data in any kind
+// of persistent storage.

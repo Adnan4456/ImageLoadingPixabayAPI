@@ -12,7 +12,6 @@ import com.example.codingtask.data.remote.PixabayApi;
 import com.example.codingtask.di.DatabaseModule;
 import com.example.codingtask.di.DatabaseModule_ProvidesDbFactory;
 import com.example.codingtask.di.NetworkModule;
-import com.example.codingtask.di.NetworkModule_ProvideRepositoryInterfaceFactory;
 import com.example.codingtask.di.NetworkModule_ProvidesApiFactory;
 import com.example.codingtask.di.NetworkModule_ProvidesRetrofitFactory;
 import com.example.codingtask.ui.activity.MainActivity;
@@ -24,10 +23,7 @@ import com.example.codingtask.ui.fragments.MainNavHostFragment;
 import com.example.codingtask.ui.fragments.MainNavHostFragment_MembersInjector;
 import com.example.codingtask.ui.viewmodels.MainViewModel;
 import com.example.codingtask.ui.viewmodels.MainViewModel_HiltModules_KeyModule_ProvideFactory;
-import com.example.codingtask.ui.viewmodels.PixabayViewModel;
-import com.example.codingtask.ui.viewmodels.PixabayViewModel_HiltModules_KeyModule_ProvideFactory;
 import com.example.codingtask.utils.InternetStatus;
-import com.example.codingtask.utils.RepositoryInterface;
 import dagger.hilt.android.ActivityRetainedLifecycle;
 import dagger.hilt.android.internal.builders.ActivityComponentBuilder;
 import dagger.hilt.android.internal.builders.ActivityRetainedComponentBuilder;
@@ -44,9 +40,8 @@ import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideAppl
 import dagger.hilt.android.internal.modules.ApplicationContextModule_ProvideContextFactory;
 import dagger.internal.DaggerGenerated;
 import dagger.internal.DoubleCheck;
-import dagger.internal.MapBuilder;
 import dagger.internal.Preconditions;
-import dagger.internal.SetBuilder;
+import java.util.Collections;
 import java.util.Map;
 import java.util.Set;
 import javax.inject.Provider;
@@ -68,8 +63,6 @@ public final class DaggerPixabayApplication_HiltComponents_SingletonC extends Pi
 
   private Provider<PixabayApi> providesApiProvider;
 
-  private Provider<RepositoryInterface> provideRepositoryInterfaceProvider;
-
   private DaggerPixabayApplication_HiltComponents_SingletonC(
       ApplicationContextModule applicationContextModuleParam) {
     this.applicationContextModule = applicationContextModuleParam;
@@ -89,16 +82,11 @@ public final class DaggerPixabayApplication_HiltComponents_SingletonC extends Pi
     return NetworkModule_ProvidesApiFactory.providesApi(providesRetrofitProvider.get());
   }
 
-  private RepositoryInterface repositoryInterface() {
-    return NetworkModule_ProvideRepositoryInterfaceFactory.provideRepositoryInterface(providesApiProvider.get(), providesDbProvider.get());
-  }
-
   @SuppressWarnings("unchecked")
   private void initialize(final ApplicationContextModule applicationContextModuleParam) {
     this.providesDbProvider = DoubleCheck.provider(new SwitchingProvider<PixabayDb>(singletonC, 0));
     this.providesRetrofitProvider = DoubleCheck.provider(new SwitchingProvider<Retrofit>(singletonC, 2));
     this.providesApiProvider = DoubleCheck.provider(new SwitchingProvider<PixabayApi>(singletonC, 1));
-    this.provideRepositoryInterfaceProvider = DoubleCheck.provider(new SwitchingProvider<RepositoryInterface>(singletonC, 3));
   }
 
   @Override
@@ -451,7 +439,7 @@ public final class DaggerPixabayApplication_HiltComponents_SingletonC extends Pi
 
     @Override
     public Set<String> getViewModelKeys() {
-      return SetBuilder.<String>newSetBuilder(2).add(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide()).add(PixabayViewModel_HiltModules_KeyModule_ProvideFactory.provide()).build();
+      return Collections.<String>singleton(MainViewModel_HiltModules_KeyModule_ProvideFactory.provide());
     }
 
     @Override
@@ -479,8 +467,6 @@ public final class DaggerPixabayApplication_HiltComponents_SingletonC extends Pi
 
     private Provider<MainViewModel> mainViewModelProvider;
 
-    private Provider<PixabayViewModel> pixabayViewModelProvider;
-
     private ViewModelCImpl(DaggerPixabayApplication_HiltComponents_SingletonC singletonC,
         ActivityRetainedCImpl activityRetainedCImpl, SavedStateHandle savedStateHandleParam) {
       this.singletonC = singletonC;
@@ -494,19 +480,14 @@ public final class DaggerPixabayApplication_HiltComponents_SingletonC extends Pi
       return new MainViewModel(singletonC.providesDbProvider.get(), singletonC.providesApiProvider.get());
     }
 
-    private PixabayViewModel pixabayViewModel() {
-      return new PixabayViewModel(singletonC.provideRepositoryInterfaceProvider.get());
-    }
-
     @SuppressWarnings("unchecked")
     private void initialize(final SavedStateHandle savedStateHandleParam) {
       this.mainViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 0);
-      this.pixabayViewModelProvider = new SwitchingProvider<>(singletonC, activityRetainedCImpl, viewModelCImpl, 1);
     }
 
     @Override
     public Map<String, Provider<ViewModel>> getHiltViewModelMap() {
-      return MapBuilder.<String, Provider<ViewModel>>newMapBuilder(2).put("com.example.codingtask.ui.viewmodels.MainViewModel", (Provider) mainViewModelProvider).put("com.example.codingtask.ui.viewmodels.PixabayViewModel", (Provider) pixabayViewModelProvider).build();
+      return Collections.<String, Provider<ViewModel>>singletonMap("com.example.codingtask.ui.viewmodels.MainViewModel", (Provider) mainViewModelProvider);
     }
 
     private static final class SwitchingProvider<T> implements Provider<T> {
@@ -532,9 +513,6 @@ public final class DaggerPixabayApplication_HiltComponents_SingletonC extends Pi
         switch (id) {
           case 0: // com.example.codingtask.ui.viewmodels.MainViewModel 
           return (T) viewModelCImpl.mainViewModel();
-
-          case 1: // com.example.codingtask.ui.viewmodels.PixabayViewModel 
-          return (T) viewModelCImpl.pixabayViewModel();
 
           default: throw new AssertionError(id);
         }
@@ -634,9 +612,6 @@ public final class DaggerPixabayApplication_HiltComponents_SingletonC extends Pi
 
         case 2: // retrofit2.Retrofit 
         return (T) NetworkModule_ProvidesRetrofitFactory.providesRetrofit();
-
-        case 3: // com.example.codingtask.utils.RepositoryInterface 
-        return (T) singletonC.repositoryInterface();
 
         default: throw new AssertionError(id);
       }

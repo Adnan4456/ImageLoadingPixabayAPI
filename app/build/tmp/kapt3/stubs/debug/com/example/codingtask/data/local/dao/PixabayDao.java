@@ -7,7 +7,7 @@ import java.lang.System;
 public abstract interface PixabayDao {
     
     @org.jetbrains.annotations.Nullable()
-    @androidx.room.Insert(onConflict = androidx.room.OnConflictStrategy.IGNORE)
+    @androidx.room.Insert(onConflict = androidx.room.OnConflictStrategy.REPLACE)
     public abstract java.lang.Object saveImage(@org.jetbrains.annotations.NotNull()
     java.util.List<com.example.codingtask.data.local.entity.Pixabay> pixabay, @org.jetbrains.annotations.NotNull()
     kotlin.coroutines.Continuation<? super kotlin.Unit> continuation);

@@ -1,6 +1,7 @@
 package com.example.codingtask.data.local.dao;
 
 import android.database.Cursor;
+import android.os.CancellationSignal;
 import androidx.room.CoroutinesRoom;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
@@ -36,7 +37,7 @@ public final class RemoteKeysDao_Impl implements RemoteKeysDao {
     this.__insertionAdapterOfRemoteKeys = new EntityInsertionAdapter<RemoteKeys>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `remoteKeys` (`id`,`prevKey`,`nextKey`) VALUES (?,?,?)";
+        return "INSERT OR REPLACE INTO `RemoteKeys` (`id`,`prevKey`,`nextKey`) VALUES (?,?,?)";
       }
 
       @Override
@@ -82,56 +83,67 @@ public final class RemoteKeysDao_Impl implements RemoteKeysDao {
   }
 
   @Override
-  public void clearAll() {
-    __db.assertNotSuspendingTransaction();
-    final SupportSQLiteStatement _stmt = __preparedStmtOfClearAll.acquire();
-    __db.beginTransaction();
-    try {
-      _stmt.executeUpdateDelete();
-      __db.setTransactionSuccessful();
-    } finally {
-      __db.endTransaction();
-      __preparedStmtOfClearAll.release(_stmt);
-    }
+  public Object clearAll(final Continuation<? super Unit> continuation) {
+    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
+      @Override
+      public Unit call() throws Exception {
+        final SupportSQLiteStatement _stmt = __preparedStmtOfClearAll.acquire();
+        __db.beginTransaction();
+        try {
+          _stmt.executeUpdateDelete();
+          __db.setTransactionSuccessful();
+          return Unit.INSTANCE;
+        } finally {
+          __db.endTransaction();
+          __preparedStmtOfClearAll.release(_stmt);
+        }
+      }
+    }, continuation);
   }
 
   @Override
-  public RemoteKeys getAllRemoteKeys(final int id) {
+  public Object getAllRemoteKeys(final int id,
+      final Continuation<? super RemoteKeys> continuation) {
     final String _sql = "SELECT * FROM remoteKeys WHERE id = ?";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
     int _argIndex = 1;
     _statement.bindLong(_argIndex, id);
-    __db.assertNotSuspendingTransaction();
-    final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
-    try {
-      final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
-      final int _cursorIndexOfPrevKey = CursorUtil.getColumnIndexOrThrow(_cursor, "prevKey");
-      final int _cursorIndexOfNextKey = CursorUtil.getColumnIndexOrThrow(_cursor, "nextKey");
-      final RemoteKeys _result;
-      if(_cursor.moveToFirst()) {
-        final int _tmpId;
-        _tmpId = _cursor.getInt(_cursorIndexOfId);
-        final Integer _tmpPrevKey;
-        if (_cursor.isNull(_cursorIndexOfPrevKey)) {
-          _tmpPrevKey = null;
-        } else {
-          _tmpPrevKey = _cursor.getInt(_cursorIndexOfPrevKey);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<RemoteKeys>() {
+      @Override
+      public RemoteKeys call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfPrevKey = CursorUtil.getColumnIndexOrThrow(_cursor, "prevKey");
+          final int _cursorIndexOfNextKey = CursorUtil.getColumnIndexOrThrow(_cursor, "nextKey");
+          final RemoteKeys _result;
+          if(_cursor.moveToFirst()) {
+            final int _tmpId;
+            _tmpId = _cursor.getInt(_cursorIndexOfId);
+            final Integer _tmpPrevKey;
+            if (_cursor.isNull(_cursorIndexOfPrevKey)) {
+              _tmpPrevKey = null;
+            } else {
+              _tmpPrevKey = _cursor.getInt(_cursorIndexOfPrevKey);
+            }
+            final Integer _tmpNextKey;
+            if (_cursor.isNull(_cursorIndexOfNextKey)) {
+              _tmpNextKey = null;
+            } else {
+              _tmpNextKey = _cursor.getInt(_cursorIndexOfNextKey);
+            }
+            _result = new RemoteKeys(_tmpId,_tmpPrevKey,_tmpNextKey);
+          } else {
+            _result = null;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
         }
-        final Integer _tmpNextKey;
-        if (_cursor.isNull(_cursorIndexOfNextKey)) {
-          _tmpNextKey = null;
-        } else {
-          _tmpNextKey = _cursor.getInt(_cursorIndexOfNextKey);
-        }
-        _result = new RemoteKeys(_tmpId,_tmpPrevKey,_tmpNextKey);
-      } else {
-        _result = null;
       }
-      return _result;
-    } finally {
-      _cursor.close();
-      _statement.release();
-    }
+    }, continuation);
   }
 
   public static List<Class<?>> getRequiredConverters() {

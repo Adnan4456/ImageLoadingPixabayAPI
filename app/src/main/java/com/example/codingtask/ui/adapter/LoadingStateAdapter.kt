@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.codingtask.databinding.ErrorStateBinding
 
 
-class LoadingStateAdapter constructor(private val retry:()->Unit): LoadStateAdapter<LoadingStateAdapter.LoaderStateViewHolder>() {
+class LoadingStateAdapter constructor(private val retry:()->Unit):
+    LoadStateAdapter<LoadingStateAdapter.LoaderStateViewHolder>() {
 
     override fun onBindViewHolder(holder: LoaderStateViewHolder, loadState: LoadState) {
         holder.bind(loadState)
@@ -19,7 +20,8 @@ class LoadingStateAdapter constructor(private val retry:()->Unit): LoadStateAdap
         parent: ViewGroup,
         loadState: LoadState
     ): LoaderStateViewHolder {
-        return LoaderStateViewHolder(ErrorStateBinding.inflate(LayoutInflater.from(parent.context),parent,false),retry)
+        return LoaderStateViewHolder(ErrorStateBinding.inflate(LayoutInflater
+            .from(parent.context),parent,false),retry)
     }
 
     class LoaderStateViewHolder(private val binding: ErrorStateBinding,retry: () -> Unit)

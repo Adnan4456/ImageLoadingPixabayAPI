@@ -1,7 +1,6 @@
 package com.example.codingtask.ui.fragments
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -27,19 +26,14 @@ import javax.inject.Inject
 
 @AndroidEntryPoint
 class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
+
     private lateinit var binding: FragmentImageBinding
-
-//    private val viewModel: PixabayViewModel by viewModels()
     private val viewModel:MainViewModel by viewModels()
-
 
     @Inject
     lateinit var internetStatus:InternetStatus
 
-
     lateinit var myAdapter:MyPagingAdapter
-
-//    private var status: Boolean = false
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,15 +45,16 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
             findNavController().navigate(action)
         })
 
-//        viewModel.searchQuery.value?.let { subscribeOnline(it) }
         viewModel.searchQuery.value?.let { searchImage("fruits") }
 
         binding.searchLayout.setEndIconOnClickListener {
 
             if (internetStatus.isOnline(requireContext())){
-                Log.d("connect", "Internet is  connected")
+
                 searchImage(binding.searchLayout.editText?.text.toString())
                 binding.progressBar.isVisible = true
+
+//                extension function to hide keyboard
                 hideKeyboard()
                 //Make search bar invisibile
                 setVisibility()
@@ -108,43 +103,6 @@ class ImageFragment : Fragment(R.layout.fragment_image) , LifecycleObserver {
                 myAdapter.submitData(response)
             }
         }
-    }
-    /*
-    private fun subscribeOnline(query: String) {
-        viewLifecycleOwner.lifecycleScope.launchWhenStarted {
-            viewModel.getImages(query).collect { result ->
-                when (result) {
-                    is Resource.Success -> {
-                        binding.progressBar.isVisible = false
-                        binding.imageRecycler.isVisible = true
-                        if (result.data?.isEmpty()!!) {
-                            showSnackbar("No Images found ")
-//                            Toast.makeText(requireContext(), "No Images found ", Toast.LENGTH_LONG).show()
-                        }
-                        else {
-                            val pix = result.data
-                            pixabayAdapter.submitList(pix)
-                            binding.imageRecycler.adapter = pixabayAdapter
-                            var slidUp = AnimationUtils.loadAnimation(requireContext(),R.anim.slide_up)
-                            binding.searchLayout.visibility = View.GONE
-                            binding.searchLayout.startAnimation(slidUp)
-                            Timber.d("${result.data}")
-                        }
-                    }
-                    is Resource.Error -> {
-                        binding.progressBar.isVisible = true
-                    }
-                    is Resource.Loading -> {
-                        binding.progressBar.isVisible = true
-                    }
-                }
-            }
-        }
-    }
-    */
-    override fun onDestroy() {
-        super.onDestroy()
-//        Log.d("TAG","Image fragment onDestroy is called.")
     }
 }
 

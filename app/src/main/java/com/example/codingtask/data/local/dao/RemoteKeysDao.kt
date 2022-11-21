@@ -8,15 +8,15 @@ import com.example.codingtask.data.local.entity.RemoteKeys
 
 
 @Dao
-interface RemoteKeysDao {
+interface   RemoteKeysDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insetAll(pixabay: List<RemoteKeys>)
 
     @Query("SELECT * FROM remoteKeys WHERE id = :id")
-    fun getAllRemoteKeys(id:Int):RemoteKeys
+    suspend fun getAllRemoteKeys(id:Int):RemoteKeys
 
     @Query("DELETE FROM remoteKeys")
-    fun clearAll()
+    suspend fun clearAll()
 
 }

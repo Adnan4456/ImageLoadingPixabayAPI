@@ -40,7 +40,7 @@ public final class PixabayDao_Impl implements PixabayDao {
     this.__insertionAdapterOfPixabay = new EntityInsertionAdapter<Pixabay>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR IGNORE INTO `pixabay_table` (`id`,`collections`,`comments`,`downloads`,`imageHeight`,`imageSize`,`imageWidth`,`largeImageURL`,`likes`,`pageURL`,`previewHeight`,`previewURL`,`previewWidth`,`tags`,`type`,`user`,`userId`,`userImageURL`,`views`,`webformatHeight`,`webformatURL`,`webformatWidth`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        return "INSERT OR REPLACE INTO `pixabay_table` (`id`,`collections`,`comments`,`downloads`,`imageHeight`,`imageSize`,`imageWidth`,`largeImageURL`,`likes`,`pageURL`,`previewHeight`,`previewURL`,`previewWidth`,`tags`,`type`,`user`,`userId`,`userImageURL`,`views`,`webformatHeight`,`webformatURL`,`webformatWidth`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
       }
 
       @Override

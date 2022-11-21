@@ -44,15 +44,15 @@ public final class PixabayDb_Impl extends PixabayDb {
       @Override
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `pixabay_table` (`id` INTEGER NOT NULL, `collections` INTEGER NOT NULL, `comments` INTEGER NOT NULL, `downloads` INTEGER NOT NULL, `imageHeight` INTEGER NOT NULL, `imageSize` INTEGER NOT NULL, `imageWidth` INTEGER NOT NULL, `largeImageURL` TEXT NOT NULL, `likes` INTEGER NOT NULL, `pageURL` TEXT NOT NULL, `previewHeight` INTEGER NOT NULL, `previewURL` TEXT NOT NULL, `previewWidth` INTEGER NOT NULL, `tags` TEXT NOT NULL, `type` TEXT NOT NULL, `user` TEXT NOT NULL, `userId` INTEGER NOT NULL, `userImageURL` TEXT NOT NULL, `views` INTEGER NOT NULL, `webformatHeight` INTEGER NOT NULL, `webformatURL` TEXT NOT NULL, `webformatWidth` INTEGER NOT NULL, PRIMARY KEY(`id`))");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `remoteKeys` (`id` INTEGER NOT NULL, `prevKey` INTEGER, `nextKey` INTEGER, PRIMARY KEY(`id`))");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `RemoteKeys` (`id` INTEGER NOT NULL, `prevKey` INTEGER, `nextKey` INTEGER, PRIMARY KEY(`id`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '8ca81884f57b1b49ada665c6d3c2a552')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '7c14b3ad3e3f4ff735ef88fd567686f9')");
       }
 
       @Override
       public void dropAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("DROP TABLE IF EXISTS `pixabay_table`");
-        _db.execSQL("DROP TABLE IF EXISTS `remoteKeys`");
+        _db.execSQL("DROP TABLE IF EXISTS `RemoteKeys`");
         if (mCallbacks != null) {
           for (int _i = 0, _size = mCallbacks.size(); _i < _size; _i++) {
             mCallbacks.get(_i).onDestructiveMigration(_db);
@@ -129,16 +129,16 @@ public final class PixabayDb_Impl extends PixabayDb {
         _columnsRemoteKeys.put("nextKey", new TableInfo.Column("nextKey", "INTEGER", false, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysRemoteKeys = new HashSet<TableInfo.ForeignKey>(0);
         final HashSet<TableInfo.Index> _indicesRemoteKeys = new HashSet<TableInfo.Index>(0);
-        final TableInfo _infoRemoteKeys = new TableInfo("remoteKeys", _columnsRemoteKeys, _foreignKeysRemoteKeys, _indicesRemoteKeys);
-        final TableInfo _existingRemoteKeys = TableInfo.read(_db, "remoteKeys");
+        final TableInfo _infoRemoteKeys = new TableInfo("RemoteKeys", _columnsRemoteKeys, _foreignKeysRemoteKeys, _indicesRemoteKeys);
+        final TableInfo _existingRemoteKeys = TableInfo.read(_db, "RemoteKeys");
         if (! _infoRemoteKeys.equals(_existingRemoteKeys)) {
-          return new RoomOpenHelper.ValidationResult(false, "remoteKeys(com.example.codingtask.data.local.entity.RemoteKeys).\n"
+          return new RoomOpenHelper.ValidationResult(false, "RemoteKeys(com.example.codingtask.data.local.entity.RemoteKeys).\n"
                   + " Expected:\n" + _infoRemoteKeys + "\n"
                   + " Found:\n" + _existingRemoteKeys);
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "8ca81884f57b1b49ada665c6d3c2a552", "f9658ad804618f55cbb9a44f69c5687b");
+    }, "7c14b3ad3e3f4ff735ef88fd567686f9", "d593475c9f7826b215c6e5b9865dae50");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
@@ -151,7 +151,7 @@ public final class PixabayDb_Impl extends PixabayDb {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "pixabay_table","remoteKeys");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "pixabay_table","RemoteKeys");
   }
 
   @Override
@@ -161,7 +161,7 @@ public final class PixabayDb_Impl extends PixabayDb {
     try {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `pixabay_table`");
-      _db.execSQL("DELETE FROM `remoteKeys`");
+      _db.execSQL("DELETE FROM `RemoteKeys`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
