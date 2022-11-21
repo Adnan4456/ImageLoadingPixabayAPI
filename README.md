@@ -32,13 +32,12 @@ Minimum API level supported is: 23
  * [SOLID] - It is a Design principles.SOLID is a mnemonic acronym for five design principles intended to make software designs more understandable, flexible, and maintainable.
  * [Kotlin](https://developer.android.com/kotlin) - Cross-platform, statically type, general purpose programming language with type inference.
  * [Paging 3](https://developer.android.com/topic/libraries/architecture/paging/v3-overview) - Paging 3 library helps to load large data from server or local database into small chunks.
- * [Diffutil Adapter] (https://developer.android.com/reference/androidx/recyclerview/widget/DiffUtil)
  * [Hilt](https://developer.android.com/training/dependency-injection/hilt-android) - Dependency injection library for android.
  * [NavigationComponets](https://developer.android.com/guide/navigation/navigation-getting-started) 
  * [Retrofit](https://square.github.io/retrofit/) - A Type-safe HTTP client for android and java used to consume REST APIs.
  * [Gson](https://github.com/google/gson) - Used to convert Json to java and kotlin objects.
  * [Glide](https://github.com/bumptech/glide) - Image loader library for android.
- * [Diff Utill Adapter] - This class finds the difference between two lists and provides the updated list as an output.
+ * [DiffUtill Adapter]  (This class finds the difference between two lists and provides the updated list as an output.)
  * [Room Database](https://developer.android.com/training/data-storage/room) -  Provides abstraction layer over SQLite.
  * [LiveData](https://developer.android.com/topic/libraries/architecture/livedata) - A lifecycle-aware data holder with the observer pattern.
  * [ViewModel](https://developer.android.com/topic/libraries/architecture/viewmodel) - Used to store and manage UI related data in a lifecycle concious way.
