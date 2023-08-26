@@ -47,4 +47,22 @@ jobs:
           name: unit_test_report
           path: app/build/reports/tests/testDebugUnitTest/
 
+  instrumentation-test:
+    needs: [unit-tests]
+    runs-on: macons-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Run expresso test
+        run:  reactivecircus/android-emulator-runner@v2
+        with:
+           api-level: 29
+           script: ./gradlew connectedCheck
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v2
+        with:
+          name: instrumentation_test_report
+          path: app/build/reports/androidTest/connected
 
