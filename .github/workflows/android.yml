@@ -30,20 +30,20 @@ jobs:
            name: lint.html
            path: app/build/reports/lint-results-debug.html
            
-    unit-tests:
-      needs: [lint]
-      runs-on: ubuntu-latest
-      steps:
-        - name: Checkout code
-          uses: actions/checkout@v2
+  unit-tests:
+    needs: [lint]
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
 
-        - name: Run unit test
-          run: ./gradlew test
+      - name: Run unit test
+        run: ./gradlew test
 
-        - name: Upload test report
-          uses: actions/upload-artifacts@v2
-          with:
-            name: unit_test_report
-            path: app/build/reports/tests/testDebugUnitTest/
+      - name: Upload test report
+        uses: actions/upload-artifacts@v2
+        with:
+          name: unit_test_report
+          path: app/build/reports/tests/testDebugUnitTest/
 
 
