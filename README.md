@@ -4,6 +4,7 @@
 - Implement Paging 3 loading state adapter to resume the unloaded page due to any error.
 - Create the object of fragments with factory method and inject to NavHostFragment using Hilt.
 - Use two way data binding and binding adapters to download images.
+- CI.CD pipeline for android lint ,unit test , instrumentation test and build apk.
 <br>
 
 Minimum API level supported is: 23
