@@ -12,9 +12,16 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2de3bb95-ef48-45aa-810e-4edc82d2268d" name="Changes" comment="clear erro=r">
+    <list default="true" id="2de3bb95-ef48-45aa-810e-4edc82d2268d" name="Changes" comment="added build command   errors">
       <change beforePath="$PROJECT_DIR$/.github/workflows/android.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/android.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.0.2/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/CodingTask.app.androidTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/CodingTask.app.androidTest.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/CodingTask.app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/CodingTask.app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/CodingTask.app.unitTest.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/CodingTask.app.unitTest.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,7 +213,28 @@
       <option name="project" value="LOCAL" />
       <updated>1693084886061</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added build command line">
+      <created>1693085944385</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1693085944385</updated>
+    </task>
+    <task id="LOCAL-00014" summary="added build command linecorrect errors">
+      <created>1693086000233</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1693086000233</updated>
+    </task>
+    <task id="LOCAL-00015" summary="added build command   errors">
+      <created>1693086103759</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1693086103759</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -234,6 +262,9 @@
     <MESSAGE value="added instrumental test" />
     <MESSAGE value="added instrumental test ddf" />
     <MESSAGE value="clear erro=r" />
-    <option name="LAST_COMMIT_MESSAGE" value="clear erro=r" />
+    <MESSAGE value="added build command line" />
+    <MESSAGE value="added build command linecorrect errors" />
+    <MESSAGE value="added build command   errors" />
+    <option name="LAST_COMMIT_MESSAGE" value="added build command   errors" />
   </component>
 </project>

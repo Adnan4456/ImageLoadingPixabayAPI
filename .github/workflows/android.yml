@@ -12,7 +12,7 @@ jobs:
     # name: Build
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         - name: Run one line command 
           run: echo "The job was automatically triggered by"
   lint:
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout code
-        uses:  actions/checkout@v2
+        uses:  actions/checkout@v3
         
       - name: Run lint 
         run: ./gradlew lintDebug
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Run unit test
         run: ./gradlew test
