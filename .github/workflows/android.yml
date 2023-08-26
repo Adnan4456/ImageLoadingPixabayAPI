@@ -47,27 +47,27 @@ jobs:
           name: unit_test_report
           path: app/build/reports/tests/testDebugUnitTest/
 
-#  instrumentation-test:
-#    needs: [unit-tests]
-#    runs-on: macos-latest
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v3
-#
-#      - name: Run expresso test
-#        uses: reactivecircus/android-emulator-runner@v2
-#        with:
-#          api-level: 29
-#          script: ./gradlew connectedCheck
-#
-#      - name: Upload test report
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: instrumentation_test_report
-#          path: app/build/reports/androidTest/connected
+  instrumentation-test:
+    needs: [unit-tests]
+    runs-on: macos-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Run expresso test
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 29
+          script: ./gradlew connectedCheck
+
+      - name: Upload test report
+        uses: actions/upload-artifact@v3
+        with:
+          name: instrumentation_test_report
+          path: app/build/reports/androidTest/connected
 
   build-project:
-    needs: [unit-tests]
+    needs: [instrumentation-test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
