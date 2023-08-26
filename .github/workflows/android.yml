@@ -67,11 +67,11 @@ jobs:
 #          path: app/build/reports/androidTest/connected
 
   build-project:
-    needs: [unit-test]:
+    needs: [unit-test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build project
         run: ./gradlew assemble
