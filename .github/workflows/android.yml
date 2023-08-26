@@ -12,7 +12,7 @@ jobs:
     # name: Build
     runs-on: ubuntu-latest
     steps:
-        - uses: actions/checkout@v2
+        - uses: actions/checkout@v3
         - name: Run one line command 
           run: echo "The job was automatically triggered by"
   lint:
@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout code
-        uses:  actions/checkout@v2
+        uses:  actions/checkout@v3
         
       - name: Run lint 
         run: ./gradlew lintDebug
@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Run unit test
         run: ./gradlew test
@@ -47,24 +47,24 @@ jobs:
           name: unit_test_report
           path: app/build/reports/tests/testDebugUnitTest/
 
-#  instrumentation-test:
-#    needs: [unit-tests]
-#    runs-on: macos-latest
-#    steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v3
-#
-#      - name: Run expresso test
-#        uses: reactivecircus/android-emulator-runner@v2
-#        with:
-#          api-level: 29
-#          script: ./gradlew connectedCheck
-#
-#      - name: Upload test report
-#        uses: actions/upload-artifact@v3
-#        with:
-#          name: instrumentation_test_report
-#          path: app/build/reports/androidTest/connected
+  instrumentation-test:
+   needs: [unit-tests]
+   runs-on: macos-latest
+   steps:
+     - name: Checkout code
+       uses: actions/checkout@v3
+
+     - name: Run expresso test
+       uses: reactivecircus/android-emulator-runner@v2
+       with:
+         api-level: 29
+         script: ./gradlew connectedCheck
+
+     - name: Upload test report
+       uses: actions/upload-artifact@v3
+       with:
+         name: instrumentation_test_report
+         path: app/build/reports/androidTest/connected
 
   build-project:
     needs: [unit-tests]
