@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\error_state.xml",
-        "source": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\error_state.xml"
+        "merged": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\error_state.xml",
+        "source": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\src\\main\\res\\layout\\error_state.xml"
     },
     {
-        "merged": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\image_item.xml",
-        "source": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\image_item.xml"
+        "merged": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_image.xml",
+        "source": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\src\\main\\res\\layout\\fragment_image.xml"
     },
     {
-        "merged": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_detail.xml",
-        "source": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\fragment_detail.xml"
+        "merged": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\image_item.xml",
+        "source": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\src\\main\\res\\layout\\image_item.xml"
     },
     {
-        "merged": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_image.xml",
-        "source": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout\\fragment_image.xml"
+        "merged": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_detail.xml",
+        "source": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\src\\main\\res\\layout\\fragment_detail.xml"
     }
 ]

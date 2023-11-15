@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
+            "outputFile": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-port\\values-port.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Adnan\\.gradle\\caches\\transforms-3\\49a710427469f2ed10e44fc21d666182\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
+                    "source": "C:\\Users\\adnan\\.gradle\\caches\\transforms-3\\49a710427469f2ed10e44fc21d666182\\transformed\\appcompat-1.4.1\\res\\values-port\\values-port.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
