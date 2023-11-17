@@ -83,6 +83,7 @@ jobs:
         uses: actions/setup-java@v3
         with:
           java-version: 11
+          distribution: 'adopt'
 
       - name: SonarCloud Scan
         run : ./gradlew app:sonarqube -Dsonar.login=${{secrets.SONAR_TOKEN }}
