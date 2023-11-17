@@ -14,14 +14,14 @@ jobs:
     steps:
         - uses: actions/checkout@v3
         - name: Run one line command 
-          run: echo "The job was automatically triggered by"
+          run: echo "build command is running"
   lint:
     needs: [build]
     runs-on: ubuntu-latest
     steps: 
       - name: Checkout code
         uses:  actions/checkout@v3
-        
+        run: echo "lint command is running"
 #      - name: Run lint
 #        run: ./gradlew lintDebug
 #
@@ -35,9 +35,9 @@ jobs:
     needs: [lint]
     runs-on: ubuntu-latest
     steps:
-#      - name: Checkout code
-#        uses: actions/checkout@v3
-#
+      - name: Checkout code
+        uses: actions/checkout@v3
+        run: echo "unit-tests command is running"
 #      - name: Run unit test
 #        run: ./gradlew test
 #
