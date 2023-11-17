@@ -1,10 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout-land\\fragment_detail.xml",
-        "source": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout-land\\fragment_detail.xml"
+        "merged": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout-land\\fragment_image.xml",
+        "source": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\src\\main\\res\\layout-land\\fragment_image.xml"
     },
     {
-        "merged": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout-land\\fragment_image.xml",
-        "source": "C:\\Users\\Adnan\\AndroidStudioProjects\\Pixabay\\app\\src\\main\\res\\layout-land\\fragment_image.xml"
+        "merged": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout-land\\fragment_detail.xml",
+        "source": "C:\\Users\\adnan\\AndroidStudioProjects\\ImageLoadingPixabayAPI\\app\\src\\main\\res\\layout-land\\fragment_detail.xml"
     }
 ]
