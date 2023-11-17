@@ -21,6 +21,8 @@ jobs:
     steps: 
       - name: Checkout code
         uses:  actions/checkout@v3
+
+      - name: Lint
         run: echo "lint command is running"
 #      - name: Run lint
 #        run: ./gradlew lintDebug
@@ -37,6 +39,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+
+      - name: unit-test
         run: echo "unit-tests command is running"
 #      - name: Run unit test
 #        run: ./gradlew test
