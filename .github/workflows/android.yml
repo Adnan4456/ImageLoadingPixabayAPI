@@ -74,7 +74,7 @@ jobs:
 #          script: ./gradlew connectedCheck
 
   SonarQube-code-analysis:
-    runs-on: ubuntu-lastest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout code
         uses: actions/checkout@v3
